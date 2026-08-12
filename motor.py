@@ -1,0 +1,261 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Motor de oportunidades - Banqueteria Gran Concepcion
+-----------------------------------------------------
+Lee el feed RSS de Mercado Publico (filtrado por los rubros de la cuenta),
+detecta la zona (Gran Concepcion / Biobio / Nacional), marca palabras clave
+de banqueteria, y (opcional) enriquece cada licitacion con su fecha de cierre
+y monto usando la API oficial si hay un ticket disponible.
+
+Escribe data.json, que el tablero (index.html) muestra.
+
+Sin dependencias externas: usa solo la libreria estandar de Python.
+Corre en GitHub Actions cada 12 h.
+
+Variables de entorno (todas opcionales):
+  MP_ORGCODE   -> OrgCode del feed RSS (default 891391)
+  MP_TICKET    -> ticket de la API de Mercado Publico (para enriquecer cierre/monto)
+  MP_FEED_FILE -> si se define, lee el RSS desde un archivo local (para pruebas)
+  MP_OUT       -> ruta de salida (default data.json)
+"""
+
+import os
+import re
+import json
+import html
+import sys
+import urllib.request
+import urllib.error
+from datetime import datetime, timezone, timedelta
+from xml.etree import ElementTree as ET
+
+ORGCODE   = os.environ.get("MP_ORGCODE", "891391")
+TICKET    = os.environ.get("MP_TICKET", "").strip()
+FEED_FILE = os.environ.get("MP_FEED_FILE", "").strip()
+OUT       = os.environ.get("MP_OUT", "data.json")
+
+FEED_URL = f"https://www.mercadopublico.cl/Portal/feed.aspx?OrgCode={ORGCODE}"
+API_URL  = "https://api.mercadopublico.cl/servicios/v1/publico/licitaciones.json"
+
+# Chile usa UTC-4 (o -3 en verano). El feed entrega hora local sin zona;
+# la tratamos como -04:00 de forma estable para el conteo.
+TZ_CL = timezone(timedelta(hours=-4))
+
+GRAN_CONCEPCION = [
+    "CONCEPCION", "CONCEPCIÓN", "TALCAHUANO", "SAN PEDRO DE LA PAZ",
+    "PENCO", "CHIGUAYANTE", "HUALPEN", "HUALPÉN",
+    "SALUD CONCEPCION", "SALUD TALCAHUANO",
+]
+
+BIOBIO = [
+    "CORONEL", "LOTA", "TOME", "TOMÉ", "HUALQUI", "SANTA JUANA",
+    "LOS ANGELES", "LOS ÁNGELES", "CABRERO", "YUMBEL", "LAJA",
+    "NACIMIENTO", "MULCHEN", "MULCHÉN", "ARAUCO", "CAÑETE", "CANETE",
+    "CURANILAHUE", "LEBU", "CONTULMO", "TIRUA", "TIRÚA", "LOS ALAMOS",
+    "SAN ROSENDO", "QUILLECO", "ANTUCO", "TUCAPEL", "NEGRETE", "QUILACO",
+    "FLORIDA", "BIO BIO", "BIOBIO", "BÍO-BÍO", "BIO-BÍO", "BÍO BÍO",
+    "REGION DEL BIO", "REGIÓN DEL BÍO",
+]
+
+# Palabras clave que confirman que la oportunidad es de banqueteria / eventos.
+KEYWORDS = [
+    "catering", "banqueter", "banquete", "coffee break", "coffe break",
+    "coctel", "cóctel", "cocteler", "alimentaci", "colacion", "colación",
+    "almuerzo", "empanada", "produccion de evento", "producción de evento",
+    "servicio de produccion", "servicio de producción", "aniversario",
+    "fiestas patrias", "chilenidad", "cafeteria", "cafetería", "vino de honor",
+    "menaje", "casino", "suministro de aliment",
+]
+
+
+def log(*a):
+    print("[motor]", *a, file=sys.stderr)
+
+
+def fetch_feed():
+    if FEED_FILE:
+        log("leyendo feed local:", FEED_FILE)
+        with open(FEED_FILE, "r", encoding="utf-8") as f:
+            return f.read()
+    log("descargando feed:", FEED_URL)
+    req = urllib.request.Request(FEED_URL, headers={"User-Agent": "Mozilla/5.0 (motor-banqueteria)"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        return r.read().decode("utf-8", errors="replace")
+
+
+def parse_feed(xml_text):
+    """Devuelve lista de dicts base a partir del RSS."""
+    items = []
+    root = ET.fromstring(xml_text)
+    for it in root.iter("item"):
+        title = (it.findtext("title") or "").strip()
+        desc  = (it.findtext("description") or "").strip()
+        pub   = (it.findtext("pubDate") or "").strip()
+        link  = (it.findtext("link") or "").strip()
+
+        desc = html.unescape(desc)
+        # title: "Id: XXXX-YY-LE26 Nombre: ...."
+        m = re.match(r"Id:\s*(\S+)\s*Nombre:\s*(.*)", title, re.S)
+        code = m.group(1).strip() if m else ""
+        nombre = (m.group(2).strip() if m else title)
+
+        # description: "Comprador: XXX<br/>Descripcion: YYY"
+        comprador, descripcion = "", ""
+        dm = re.search(r"Comprador:\s*(.*?)\s*(?:<br\s*/?>|\n)\s*Descripcion:\s*(.*)", desc, re.S | re.I)
+        if dm:
+            comprador = re.sub(r"\s+", " ", dm.group(1)).strip()
+            descripcion = re.sub(r"\s+", " ", dm.group(2)).strip()
+        else:
+            comprador = re.sub(r"\s+", " ", desc).strip()
+
+        items.append({
+            "id": code,
+            "nombre": nombre,
+            "organismo": comprador,
+            "descripcion": descripcion[:400],
+            "publicada": normalize_date(pub),
+            "link": link,
+            "tipo": tipo_from_code(code),
+        })
+    return items
+
+
+def tipo_from_code(code):
+    # 1234-56-LE26 -> "LE"
+    m = re.search(r"-([A-Za-z]{1,3})\d{2}$", code)
+    return m.group(1).upper() if m else ""
+
+
+def normalize_date(pub):
+    # "2026-08-12T17:18:33.360" -> ISO con zona -04:00
+    if not pub:
+        return ""
+    pub = pub.strip().replace("Z", "")
+    try:
+        dt = datetime.fromisoformat(pub.split(".")[0])
+        dt = dt.replace(tzinfo=TZ_CL)
+        return dt.isoformat()
+    except Exception:
+        return pub
+
+
+def zona_de(texto):
+    t = (texto or "").upper()
+    for k in GRAN_CONCEPCION:
+        if k in t:
+            return "Gran Concepción"
+    for k in BIOBIO:
+        if k in t:
+            return "Biobío"
+    return "Nacional"
+
+
+def comuna_de(texto, zona):
+    t = (texto or "").upper()
+    nombres = {
+        "TALCAHUANO": "Talcahuano", "SAN PEDRO DE LA PAZ": "San Pedro de la Paz",
+        "CHIGUAYANTE": "Chiguayante", "HUALPEN": "Hualpén", "HUALPÉN": "Hualpén",
+        "PENCO": "Penco", "CONCEPCION": "Concepción", "CONCEPCIÓN": "Concepción",
+        "CORONEL": "Coronel", "LOTA": "Lota", "TOME": "Tomé", "TOMÉ": "Tomé",
+        "HUALQUI": "Hualqui", "CABRERO": "Cabrero", "LOS ANGELES": "Los Ángeles",
+        "ARAUCO": "Arauco", "CAÑETE": "Cañete", "CONTULMO": "Contulmo",
+    }
+    for k, v in nombres.items():
+        if k in t:
+            return v
+    return zona
+
+
+def keywords_de(texto):
+    t = (texto or "").lower()
+    found = []
+    for k in KEYWORDS:
+        if k in t:
+            label = {
+                "banqueter": "banquetería", "banquete": "banquetería",
+                "coctel": "cóctel", "cóctel": "cóctel", "cocteler": "cóctel",
+                "alimentaci": "alimentación", "produccion de evento": "producción de eventos",
+                "producción de evento": "producción de eventos",
+                "servicio de produccion": "producción", "servicio de producción": "producción",
+                "cafeteria": "cafetería", "cafetería": "cafetería",
+                "coffe break": "coffee break", "colacion": "colación", "colación": "colación",
+                "suministro de aliment": "suministro de alimentos",
+            }.get(k, k)
+            if label not in found:
+                found.append(label)
+    return found[:4]
+
+
+def enrich_api(item):
+    """Si hay ticket, consulta la ficha para obtener fecha de cierre y monto."""
+    if not TICKET or not item.get("id"):
+        return
+    url = f"{API_URL}?codigo={urllib.parse.quote(item['id'])}&ticket={urllib.parse.quote(TICKET)}"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "motor-banqueteria"})
+        with urllib.request.urlopen(req, timeout=45) as r:
+            data = json.loads(r.read().decode("utf-8", errors="replace"))
+        listado = data.get("Listado") or []
+        if not listado:
+            return
+        d = listado[0]
+        fechas = d.get("Fechas") or {}
+        cierre = fechas.get("FechaCierre") or d.get("FechaCierre")
+        if cierre:
+            item["fecha_cierre"] = normalize_date(cierre)
+        monto = d.get("MontoEstimado")
+        if monto:
+            item["monto_label"] = f"${int(monto):,}".replace(",", ".")
+    except Exception as e:
+        log("API sin dato para", item.get("id"), "-", e)
+
+
+def main():
+    xml_text = fetch_feed()
+    base = parse_feed(xml_text)
+    log("items en el feed:", len(base))
+
+    vistos = set()
+    out = []
+    for it in base:
+        if it["id"] in vistos:
+            continue
+        vistos.add(it["id"])
+
+        blob = f"{it['organismo']} {it['nombre']} {it['descripcion']}"
+        it["zona"] = zona_de(it["organismo"] + " " + it["descripcion"])
+        it["comuna"] = comuna_de(it["organismo"] + " " + it["descripcion"], it["zona"])
+        it["keywords"] = keywords_de(blob)
+        it["fuente"] = "Licitación"
+        it["monto_label"] = it.get("monto_label", "")
+        # limpiamos descripcion larga del payload final
+        it.pop("descripcion", None)
+        out.append(it)
+
+    # enriquecer con API solo si hay ticket (para no gastar cuota sin necesidad)
+    if TICKET:
+        log("enriqueciendo con API (ticket presente)...")
+        for it in out:
+            enrich_api(it)
+
+    payload = {
+        "generado": datetime.now(TZ_CL).isoformat(),
+        "orgcode": ORGCODE,
+        "fuente_api": bool(TICKET),
+        "total": len(out),
+        "oportunidades": out,
+    }
+    with open(OUT, "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+    log("escrito", OUT, "con", len(out), "oportunidades")
+
+    # resumen por zona
+    from collections import Counter
+    c = Counter(o["zona"] for o in out)
+    log("por zona:", dict(c))
+
+
+if __name__ == "__main__":
+    import urllib.parse  # noqa
+    main()

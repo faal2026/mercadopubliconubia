@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tablero de oportunidades · Banquetería Gran Concepción</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#EEF1F2; --surface:#FFFFFF; --ink:#16242B; --muted:#5C6B72; --line:#DDE3E5;
+    --petrol:#0B4F5E; --petrol-bright:#0E7F92; --teal:#128A7D; --gray:#8A969B;
+    --rojo:#C0362C; --ambar:#B5720F; --verde:#2C7A50;
+    --shadow:0 1px 2px rgba(22,36,43,.06),0 8px 24px -12px rgba(22,36,43,.18);
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Inter",system-ui,sans-serif;line-height:1.5;padding-bottom:64px}
+  .wrap{max-width:960px;margin:0 auto;padding:0 18px}
+  header.top{background:var(--petrol);color:#EAF3F4;border-bottom:3px solid var(--petrol-bright)}
+  .top .wrap{padding:22px 18px}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8FC3CB;margin:0 0 6px}
+  h1{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:clamp(21px,4.5vw,30px);line-height:1.12;margin:0;letter-spacing:-.01em}
+  .meta{display:flex;flex-wrap:wrap;gap:12px 22px;margin-top:16px;font-family:"IBM Plex Mono",monospace;font-size:12px;color:#A9CDD3}
+  .meta b{color:#FFFFFF;font-weight:500}
+  .meta .dot{color:var(--petrol-bright)}
+
+  .controls{margin-top:20px}
+  .search{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:11px;background:var(--surface);font:inherit;font-size:15px;color:var(--ink);box-shadow:var(--shadow)}
+  .search:focus{outline:2px solid var(--petrol-bright);outline-offset:1px;border-color:transparent}
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;align-items:center}
+  .chip{font:inherit;font-size:13px;font-weight:500;cursor:pointer;padding:7px 13px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--muted);transition:.14s}
+  .chip:hover{border-color:#B9C4C8}
+  .chip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .chip:focus-visible{outline:2px solid var(--petrol-bright);outline-offset:2px}
+  .spacer{flex:1 1 auto;min-width:8px}
+  select.sort{font:inherit;font-size:13px;padding:7px 11px;border-radius:9px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+
+  .countline{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);margin:20px 2px 10px;display:flex;justify-content:space-between;gap:12px}
+
+  ul.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:80px 1fr}
+  .card.done{opacity:.5}
+  .rail{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:14px 6px;text-align:center;color:#fff}
+  .rail .num{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:16px;line-height:1.05}
+  .rail .lab{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.92}
+  .rail.r{background:var(--rojo)} .rail.a{background:var(--ambar)} .rail.v{background:var(--verde)}
+  .rail.pub{background:var(--petrol)} .rail.old{background:var(--gray)}
+
+  .body{padding:14px 16px 15px;min-width:0}
+  .row1{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:7px}
+  .badge{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:500;letter-spacing:.04em;padding:3px 8px;border-radius:6px;text-transform:uppercase}
+  .badge.tipo{background:#EAEBF6;color:#4B54A6}
+  .zona{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:500;padding:3px 8px;border-radius:6px}
+  .zona.gc{background:#E1F0F2;color:var(--petrol)} .zona.bb{background:#E3F3F0;color:var(--teal)} .zona.na{background:#EEF0F1;color:var(--gray)}
+  .idcode{font-family:"IBM Plex Mono",monospace;font-size:11px;color:#98A4A9;margin-left:auto}
+  .title{font-family:"Space Grotesk",sans-serif;font-weight:500;font-size:16.5px;line-height:1.24;margin:0 0 6px;letter-spacing:-.005em}
+  .title mark{background:#FCEFA6;padding:0 1px;border-radius:2px}
+  .org{font-size:13.5px;color:var(--muted);margin:0 0 10px}
+  .facts{display:flex;flex-wrap:wrap;gap:6px 16px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted);margin-bottom:12px}
+  .facts b{color:var(--ink);font-weight:500}
+  .kw{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:13px}
+  .kw span{font-size:11px;background:var(--paper);border:1px solid var(--line);color:var(--muted);padding:2px 7px;border-radius:5px}
+  .actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .apply{font:inherit;font-weight:600;font-size:13.5px;text-decoration:none;background:var(--petrol-bright);color:#fff;padding:9px 15px;border-radius:9px;display:inline-flex;align-items:center;gap:7px;transition:.14s}
+  .apply:hover{background:var(--petrol)}
+  .statebtns{display:flex;gap:6px;margin-left:auto}
+  .sbtn{font:inherit;font-size:12px;cursor:pointer;padding:7px 10px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--muted);transition:.12s}
+  .sbtn:hover{border-color:#B9C4C8;color:var(--ink)}
+  .sbtn[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .sbtn.post[aria-pressed="true"]{background:var(--verde);border-color:var(--verde)}
+
+  .empty{text-align:center;padding:56px 20px;color:var(--muted);border:1px dashed var(--line);border-radius:var(--radius);background:var(--surface)}
+  .empty h3{font-family:"Space Grotesk",sans-serif;font-weight:600;color:var(--ink);margin:0 0 6px;font-size:18px}
+  footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px}
+  footer p{margin:0 0 6px} footer .warn{font-weight:500;color:var(--ink)}
+  .banner{background:#FBF2E2;color:#7A4E08;border:1px solid #EBD3A3;border-radius:10px;padding:9px 13px;margin-top:16px;font-size:13px;display:none}
+  .banner.show{display:block}
+
+  @media (max-width:520px){
+    .card{grid-template-columns:66px 1fr}
+    .statebtns{margin-left:0;width:100%;margin-top:2px}
+    .apply{flex:1 1 auto;justify-content:center}
+    .idcode{margin-left:0}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <p class="kicker">ChileCompra · Mercado Público · OrgCode <span id="m-org">891391</span></p>
+      <h1>Tablero de oportunidades — Banquetería Gran Concepción</h1>
+      <div class="meta">
+        <span>Actualizado <b id="m-updated">—</b></span>
+        <span class="dot">·</span><span><b id="m-total">0</b> licitaciones</span>
+        <span class="dot">·</span><span><b id="m-gc">0</b> Gran Concepción</span>
+        <span class="dot">·</span><span><b id="m-bb">0</b> Biobío</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="banner" id="banner"></div>
+
+    <div class="controls">
+      <input class="search" id="search" type="search" placeholder="Buscar por nombre, organismo o palabra clave…" aria-label="Buscar" />
+      <div class="filters" role="group" aria-label="Zona">
+        <button class="chip" data-zona="gc" aria-pressed="false">Gran Concepción</button>
+        <button class="chip" data-zona="bb" aria-pressed="true">Región Biobío</button>
+        <button class="chip" data-zona="all" aria-pressed="false">Todo Chile</button>
+        <span class="spacer"></span>
+        <select class="sort" id="sort" aria-label="Ordenar">
+          <option value="pub">Más recientes</option>
+          <option value="cierre">Cierre más próximo</option>
+          <option value="comuna">Comuna (A–Z)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="countline"><span id="count">—</span><span id="echo"></span></div>
+    <ul class="list" id="list" aria-live="polite"></ul>
+    <div class="empty" id="empty" hidden><h3>Nada por acá</h3><p>Prueba ampliar a “Todo Chile” o borrar la búsqueda.</p></div>
+
+    <footer>
+      <p class="warn">Este tablero solo muestra y ordena. No postula por ti: cada botón te lleva a la ficha en Mercado Público.</p>
+      <p>Se actualiza solo cada 12 h leyendo tu feed RSS (rubros de banquetería). Las fechas de cierre aparecen cuando el motor tiene ticket de API.</p>
+    </footer>
+  </div>
+
+<script>
+(function(){
+  "use strict";
+  var mem={};
+  var store={get:function(k){try{return localStorage.getItem(k)}catch(e){return mem[k]||null}},
+             set:function(k,v){try{localStorage.setItem(k,v)}catch(e){mem[k]=v}}};
+  var DATA=[], META={}, ui={zona:"bb",q:"",sort:"pub"};
+
+  function horas(it){
+    if(!it.fecha_cierre) return null;
+    var c=new Date(it.fecha_cierre); if(isNaN(c)) return null;
+    return (c-Date.now())/3600000;
+  }
+  function diasDesde(it){
+    if(!it.publicada) return null;
+    var p=new Date(it.publicada); if(isNaN(p)) return null;
+    return (Date.now()-p)/86400000;
+  }
+  function rail(it){
+    var h=horas(it);
+    if(h!==null){
+      if(h<0) return {cls:"old",num:"·",lab:"cerrada"};
+      if(h<24) return {cls:"r",num:Math.max(1,Math.round(h))+"h",lab:"cierra hoy"};
+      if(h<48) return {cls:"a",num:"1-2d",lab:Math.round(h)+"h"};
+      return {cls:"v",num:Math.floor(h/24)+"d",lab:"holgado"};
+    }
+    var d=diasDesde(it);
+    if(d===null) return {cls:"pub",num:"—",lab:"s/f"};
+    if(d<1) return {cls:"pub",num:"HOY",lab:"publicada"};
+    if(d<2) return {cls:"pub",num:"AYER",lab:"publicada"};
+    if(d<8) return {cls:"pub",num:Math.floor(d)+"d",lab:"publicada"};
+    return {cls:"old",num:Math.floor(d)+"d",lab:"publicada"};
+  }
+  function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+  function hl(t,q){var s=esc(t); if(!q)return s; try{var re=new RegExp("("+q.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","ig"); return s.replace(re,"<mark>$1</mark>")}catch(e){return s}}
+  function zc(z){return z==="Gran Concepción"?"gc":z==="Biobío"?"bb":"na"}
+
+  function pasa(it){
+    if(ui.zona==="gc" && it.zona!=="Gran Concepción") return false;
+    if(ui.zona==="bb" && !(it.zona==="Gran Concepción"||it.zona==="Biobío")) return false;
+    if(store.get("st:"+it.id)==="descartar") return false;
+    if(ui.q){var hay=(it.nombre+" "+it.organismo+" "+(it.keywords||[]).join(" ")+" "+it.comuna).toLowerCase();
+      if(hay.indexOf(ui.q.toLowerCase())===-1) return false;}
+    return true;
+  }
+  function ordenar(a,b){
+    if(ui.sort==="cierre"){var ha=horas(a),hb=horas(b);ha=ha===null?9e9:(ha<0?8e9:ha);hb=hb===null?9e9:(hb<0?8e9:hb);return ha-hb}
+    if(ui.sort==="comuna")return String(a.comuna).localeCompare(String(b.comuna),"es");
+    return String(b.publicada||"").localeCompare(String(a.publicada||""));
+  }
+  function card(it){
+    var r=rail(it), st=store.get("st:"+it.id)||"";
+    var kw=(it.keywords||[]).map(function(k){return "<span>"+esc(k)+"</span>"}).join("");
+    var monto=it.monto_label?'<span>Monto <b>'+esc(it.monto_label)+'</b></span>':'';
+    var pub=it.publicada?('<span>Publicada <b>'+esc(it.publicada.slice(0,10))+'</b></span>'):'';
+    var apply=(horas(it)!==null&&horas(it)<0)
+      ? '<span style="font-family:IBM Plex Mono,monospace;font-size:11px;color:var(--rojo);font-weight:500">Cerrada</span>'
+      : '<a class="apply" href="'+esc(it.link||"#")+'" target="_blank" rel="noopener">Ir a postular →</a>';
+    return '<li class="card'+(st==="descartar"?" done":"")+'" data-id="'+esc(it.id)+'">'+
+      '<div class="rail '+r.cls+'"><span class="num">'+r.num+'</span><span class="lab">'+r.lab+'</span></div>'+
+      '<div class="body"><div class="row1">'+
+        '<span class="zona '+zc(it.zona)+'">'+esc(it.zona)+'</span>'+
+        (it.tipo?'<span class="badge tipo">'+esc(it.tipo)+'</span>':'')+
+        '<span class="idcode">'+esc(it.id)+'</span></div>'+
+        '<h2 class="title">'+hl(it.nombre,ui.q)+'</h2>'+
+        '<p class="org">'+esc(it.organismo)+'</p>'+
+        '<div class="facts">'+monto+pub+'</div>'+
+        (kw?'<div class="kw">'+kw+'</div>':'')+
+        '<div class="actions">'+apply+'<div class="statebtns">'+
+          '<button class="sbtn" data-st="revisar" aria-pressed="'+(st==="revisar")+'">Revisar</button>'+
+          '<button class="sbtn post" data-st="postular" aria-pressed="'+(st==="postular")+'">Postular</button>'+
+          '<button class="sbtn" data-st="descartar" aria-pressed="'+(st==="descartar")+'">Descartar</button>'+
+        '</div></div></div></li>';
+  }
+  function render(){
+    var el=document.getElementById("list");
+    var vis=DATA.filter(pasa).sort(ordenar);
+    el.innerHTML=vis.map(card).join("");
+    document.getElementById("empty").hidden=vis.length>0;
+    document.getElementById("count").textContent=vis.length+(vis.length===1?" oportunidad":" oportunidades");
+    var e=[]; if(ui.zona==="gc")e.push("Gran Concepción"); if(ui.zona==="bb")e.push("Región Biobío"); if(ui.q)e.push('"'+ui.q+'"');
+    document.getElementById("echo").textContent=e.join(" · ");
+    el.querySelectorAll(".sbtn").forEach(function(b){b.addEventListener("click",function(){
+      var id=b.closest(".card").getAttribute("data-id"),v=b.getAttribute("data-st"),cur=store.get("st:"+id);
+      store.set("st:"+id,cur===v?"":v);render();});});
+  }
+  function meta(){
+    var gc=DATA.filter(function(o){return o.zona==="Gran Concepción"}).length;
+    var bb=DATA.filter(function(o){return o.zona==="Biobío"}).length;
+    document.getElementById("m-total").textContent=DATA.length;
+    document.getElementById("m-gc").textContent=gc;
+    document.getElementById("m-bb").textContent=bb;
+    if(META.orgcode)document.getElementById("m-org").textContent=META.orgcode;
+    var u=META.generado?new Date(META.generado):new Date();
+    document.getElementById("m-updated").textContent=u.toLocaleString("es-CL",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
+    if(!META.fuente_api){var b=document.getElementById("banner");
+      b.innerHTML='<b>Sin fechas de cierre.</b> El motor está leyendo el RSS. Para ver la cuenta regresiva de cada licitación, agrega el ticket de la API (ver README).';
+      b.classList.add("show");}
+  }
+  document.querySelectorAll('.chip[data-zona]').forEach(function(c){c.addEventListener("click",function(){
+    document.querySelectorAll('.chip[data-zona]').forEach(function(o){o.setAttribute("aria-pressed","false")});
+    c.setAttribute("aria-pressed","true"); ui.zona=c.getAttribute("data-zona"); render();});});
+  document.getElementById("sort").addEventListener("change",function(e){ui.sort=e.target.value;render()});
+  var t; document.getElementById("search").addEventListener("input",function(e){clearTimeout(t);t=setTimeout(function(){ui.q=e.target.value.trim();render()},120)});
+
+  var EMBED=[{"id": "707419-34-LE26", "nombre": "CONTRATAR SERVICIOS ARRIENDO SALONES Y CATERING PA", "organismo": "FUNDACION EDUCACIONAL PARA EL DESAROLLO INTEGRAL DE LA NIÑEZ - Regional Valparaiso", "publicada": "2026-08-12T17:18:33-04:00", "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=fkmYjqcJifMEZE75kykpRw==", "tipo": "LE", "zona": "Nacional", "comuna": "Nacional", "keywords": ["catering"], "fuente": "Licitación", "monto_label": ""}, {"id": "2656-55-LE26", "nombre": "SERVICIO DE PRODUCCIÓN PASAMOS AGOSTO 2026", "organismo": "I MUNICIPALIDAD DE TOME - Dirección de Administración y Finanzas", "publicada": "2026-08-12T13:10:08-04:00", "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=OeUHZQxwRPnumAR7//mS6A==", "tipo": "LE", "zona": "Biobío", "comuna": "Tomé", "keywords": ["producción"], "fuente": "Licitación", "monto_label": ""}, {"id": "4454-21-LE26", "nombre": "PRODUCCIÓN DE EVENTOS - PROGRAMA MUNICIPAL", "organismo": "I MUNICIPALIDAD DE HUALQUI - ADMINISTRACION Y FINANZAS - DEPTO ADQUISICIONES", "publicada": "2026-08-10T21:36:52-04:00", "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=KBzjESoV4jUvfVqVrdR0DA==", "tipo": "LE", "zona": "Biobío", "comuna": "Hualqui", "keywords": ["producción de eventos"], "fuente": "Licitación", "monto_label": ""}, {"id": "4079-38-LE26", "nombre": "CONTRATO SUMINISTRO ALIMENTOS PERC NOPERC Y DESC", "organismo": "I MUNICIPALIDAD DE CABRERO - Administración y Finanzas", "publicada": "2026-08-10T19:30:17-04:00", "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=GVzcq2aLl+br60BSOwYC6A==", "tipo": "LE", "zona": "Biobío", "comuna": "Cabrero", "keywords": [], "fuente": "Licitación", "monto_label": ""}, {"id": "1079650-67-LE26", "nombre": "CAPACITACIONES PARA HOSPITAL DE CORONEL", "organismo": "SERVICIO DE SALUD CONCEPCION - ADMINISTRACION DE FONDOS", "publicada": "2026-08-11T13:44:02-04:00", "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=XbJO//0J1tIEbX8lXMmcDw==", "tipo": "LE", "zona": "Gran Concepción", "comuna": "Concepción", "keywords": [], "fuente": "Licitación", "monto_label": ""}, {"id": "2101-101-LE26", "nombre": "MENAJE DESTINADO A LA  CENTRAL DE ALIMENTACION", "organismo": "HOSPITAL INTERCULTURAL KALLVU LLANKA.- - Hospital Cañete", "publicada": "2026-08-10T20:00:39-04:00", "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=90zn3xac9B1TyjJW5tOyqQ==", "tipo": "LE", "zona": "Biobío", "comuna": "Cañete", "keywords": ["alimentación", "menaje"], "fuente": "Licitación", "monto_label": ""}, {"id": "483-39-L126", "nombre": "Convenio suministro de Almuerzos de fines de semana Personal turnante Hospital de Contulmo", "organismo": "SERVICIO DE SALUD CONCEPCION ARAUCO HOSPITAL DE CONTULMO - H Contulmo", "publicada": "2026-08-07T20:22:26-04:00", "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=g3wExLur70xH3YQ+SoyFDw==", "tipo": "", "zona": "Gran Concepción", "comuna": "Concepción", "keywords": ["alimentación", "almuerzo"], "fuente": "Licitación", "monto_label": ""}, {"id": "1271359-114-LE26", "nombre": "ADQUISICIÓN DE EMPANADAS FESTIVIDAD FIESTAS PATRIAS", "organismo": "CORP MUNICIPAL DE DESARROLLO SOCIAL DE LAMPA - LICITACIONES", "publicada": "2026-08-10T23:53:39-04:00", "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=SNCqZVrgtqynH2VzorX9Bw==", "tipo": "LE", "zona": "Nacional", "comuna": "Nacional", "keywords": ["empanada", "fiestas patrias"], "fuente": "Licitación", "monto_label": ""}, {"id": "2770-119-LE26", "nombre": "SERVICIO DE COFFEE BREAK PARA ACTIVIDADES PROTOCOLARES DE LA MUNICIPALIDAD DE MAIPÚ", "organismo": "I MUNICIPALIDAD DE MAIPU - I MUNICIPALIDAD DE MAIPU", "publicada": "2026-08-07T19:28:21-04:00", "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=RgcoiYMEIut1s8rENUBFwQ==", "tipo": "LE", "zona": "Nacional", "comuna": "Nacional", "keywords": ["coffee break", "alimentación"], "fuente": "Licitación", "monto_label": ""}];
+  function boot(p){DATA=p.oportunidades||[];META=p;meta();render()}
+  fetch("data.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json()})
+    .then(function(j){boot(j)}).catch(function(){boot({oportunidades:EMBED,generado:new Date().toISOString(),orgcode:"891391",fuente_api:false})});
+})();
+</script>
+</body>
+</html>
