@@ -25,6 +25,7 @@ import re
 import json
 import html
 import sys
+import time
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone, timedelta
@@ -187,15 +188,40 @@ def keywords_de(texto):
     return found[:4]
 
 
+# La API de Mercado Publico es sensible al ritmo: si se le consulta muy seguido
+# responde 429 (Too Many Requests). Vamos despacio y reintentamos con esperas
+# crecientes cuando eso ocurre.
+API_PAUSA = float(os.environ.get("MP_API_PAUSA", "2.0"))   # segundos entre consultas
+API_REINTENTOS = int(os.environ.get("MP_API_REINTENTOS", "4"))
+
+
+def _api_get(url):
+    """GET con reintentos ante 429/errores transitorios. Devuelve dict o None."""
+    espera = 5
+    for intento in range(API_REINTENTOS):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "motor-banqueteria"})
+            with urllib.request.urlopen(req, timeout=45) as r:
+                return json.loads(r.read().decode("utf-8", errors="replace"))
+        except urllib.error.HTTPError as e:
+            if e.code == 429 and intento < API_REINTENTOS - 1:
+                log(f"429, esperando {espera}s y reintentando...")
+                time.sleep(espera)
+                espera *= 2   # 5s, 10s, 20s...
+                continue
+            raise
+    return None
+
+
 def enrich_api(item):
     """Si hay ticket, consulta la ficha para obtener fecha de cierre y monto."""
     if not TICKET or not item.get("id"):
         return
     url = f"{API_URL}?codigo={urllib.parse.quote(item['id'])}&ticket={urllib.parse.quote(TICKET)}"
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "motor-banqueteria"})
-        with urllib.request.urlopen(req, timeout=45) as r:
-            data = json.loads(r.read().decode("utf-8", errors="replace"))
+        data = _api_get(url)
+        if not data:
+            return
         listado = data.get("Listado") or []
         if not listado:
             return
@@ -209,6 +235,8 @@ def enrich_api(item):
             item["monto_label"] = f"${int(monto):,}".replace(",", ".")
     except Exception as e:
         log("API sin dato para", item.get("id"), "-", e)
+    finally:
+        time.sleep(API_PAUSA)   # ritmo suave entre consultas
 
 
 def main():
