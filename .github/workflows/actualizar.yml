@@ -1,0 +1,39 @@
+name: Actualizar oportunidades
+
+on:
+  schedule:
+    - cron: "0 11,23 * * *"   # 07:00 y 19:00 hora Chile (UTC-4), cada 12 h
+  workflow_dispatch:           # botón para ejecutarlo manualmente cuando quieras
+
+permissions:
+  contents: write
+
+jobs:
+  motor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Traer el repo
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Correr el motor
+        env:
+          MP_ORGCODE: "891391"
+          MP_TICKET: ${{ secrets.MP_TICKET }}   # opcional: agrega el ticket como secret para tener fechas de cierre
+        run: python motor.py
+
+      - name: Publicar data.json si cambió
+        run: |
+          git config user.name "motor-bot"
+          git config user.email "motor-bot@users.noreply.github.com"
+          git add data.json
+          if git diff --staged --quiet; then
+            echo "Sin cambios."
+          else
+            git commit -m "Actualización automática de oportunidades"
+            git push
+          fi
