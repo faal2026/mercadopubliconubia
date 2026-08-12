@@ -252,6 +252,7 @@ def main():
 
     vistos = set()
     out = []
+    descartadas = 0
     for it in base:
         if it["id"] in vistos:
             continue
@@ -260,12 +261,25 @@ def main():
         blob = f"{it['organismo']} {it['nombre']} {it['descripcion']}"
         it["zona"] = zona_de(it["organismo"])
         it["comuna"] = comuna_de(it["organismo"], it["zona"])
+
+        # Guardar SOLO Región del Biobío (incluye Gran Concepción).
+        # Para decidir miramos organismo + descripción, así no perdemos
+        # oportunidades reales de la región cuyo comprador no nombra la comuna
+        # (p. ej. ministerios que dicen "VIII Región" o "Biobío" en el texto).
+        if it["zona"] == "Nacional" and zona_de(blob) != "Nacional":
+            it["zona"] = zona_de(blob)  # rescate por descripción
+            it["comuna"] = comuna_de(blob, it["zona"])
+        if it["zona"] == "Nacional":
+            descartadas += 1
+            continue
+
         it["keywords"] = keywords_de(blob)
         it["fuente"] = "Licitación"
         it["monto_label"] = it.get("monto_label", "")
-        # limpiamos descripcion larga del payload final
         it.pop("descripcion", None)
         out.append(it)
+
+    log("descartadas por fuera de Biobío:", descartadas)
 
     # enriquecer con API solo si hay ticket (para no gastar cuota sin necesidad)
     if TICKET:
