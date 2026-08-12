@@ -1,9 +1,25 @@
 {
-  "generado": "2026-08-12T14:30:05.635321-04:00",
+  "generado": "2026-08-12T14:47:02.103562-04:00",
   "orgcode": "891391",
-  "fuente_api": false,
-  "total": 9,
+  "fuente_api": true,
+  "total": 36,
   "oportunidades": [
+    {
+      "id": "4511-49-LE26",
+      "nombre": "ARRIENDO E INSTALACIÓN DE CARPAS DE EVENTOS FIESTA DE LA CHILENIDAD VIVE RETIRO 2026",
+      "organismo": "ILUSTRE MUNICIPALIDAD DE RETIRO - Secpla",
+      "publicada": "2026-08-12T17:40:21-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=1FN7jmTfJeaRk4vgI18NOg==",
+      "tipo": "LE",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [
+        "chilenidad"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-08-24T15:01:00-04:00"
+    },
     {
       "id": "707419-34-LE26",
       "nombre": "CONTRATAR SERVICIOS ARRIENDO SALONES Y CATERING PA",
@@ -17,95 +33,176 @@
         "catering"
       ],
       "fuente": "Licitación",
-      "monto_label": ""
+      "monto_label": "$22.894.449",
+      "fecha_cierre": "2026-08-28T15:00:00-04:00"
     },
     {
-      "id": "2656-55-LE26",
-      "nombre": "SERVICIO DE PRODUCCIÓN PASAMOS AGOSTO 2026",
-      "organismo": "I MUNICIPALIDAD DE TOME - Dirección de Administración y Finanzas",
-      "publicada": "2026-08-12T13:10:08-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=OeUHZQxwRPnumAR7//mS6A==",
+      "id": "1287766-7-LE26",
+      "nombre": "CONCESION DE CAFETERIA EN POLIDEPORTIVO ÑUÑOA",
+      "organismo": "Corporación Municipal de Deportes de Ñuñoa - Corporación Municipal de Deportes de Ñuñoa",
+      "publicada": "2026-08-12T16:22:58-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=knGuM+mtVYvBHpC7hj1GdQ==",
       "tipo": "LE",
-      "zona": "Biobío",
-      "comuna": "Tomé",
-      "keywords": [
-        "producción"
-      ],
-      "fuente": "Licitación",
-      "monto_label": ""
-    },
-    {
-      "id": "4454-21-LE26",
-      "nombre": "PRODUCCIÓN DE EVENTOS - PROGRAMA MUNICIPAL",
-      "organismo": "I MUNICIPALIDAD DE HUALQUI - ADMINISTRACION Y FINANZAS - DEPTO ADQUISICIONES",
-      "publicada": "2026-08-10T21:36:52-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=KBzjESoV4jUvfVqVrdR0DA==",
-      "tipo": "LE",
-      "zona": "Biobío",
-      "comuna": "Hualqui",
-      "keywords": [
-        "producción de eventos"
-      ],
-      "fuente": "Licitación",
-      "monto_label": ""
-    },
-    {
-      "id": "4079-38-LE26",
-      "nombre": "CONTRATO SUMINISTRO ALIMENTOS PERC NOPERC Y DESC",
-      "organismo": "I MUNICIPALIDAD DE CABRERO - Administración y Finanzas",
-      "publicada": "2026-08-10T19:30:17-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=GVzcq2aLl+br60BSOwYC6A==",
-      "tipo": "LE",
-      "zona": "Biobío",
-      "comuna": "Cabrero",
-      "keywords": [],
-      "fuente": "Licitación",
-      "monto_label": ""
-    },
-    {
-      "id": "1079650-67-LE26",
-      "nombre": "CAPACITACIONES PARA HOSPITAL DE CORONEL",
-      "organismo": "SERVICIO DE SALUD CONCEPCION - ADMINISTRACION DE FONDOS",
-      "publicada": "2026-08-11T13:44:02-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=XbJO//0J1tIEbX8lXMmcDw==",
-      "tipo": "LE",
-      "zona": "Gran Concepción",
-      "comuna": "Concepción",
-      "keywords": [],
-      "fuente": "Licitación",
-      "monto_label": ""
-    },
-    {
-      "id": "2101-101-LE26",
-      "nombre": "MENAJE DESTINADO A LA  CENTRAL DE ALIMENTACION",
-      "organismo": "HOSPITAL INTERCULTURAL KALLVU LLANKA.- - Hospital Cañete",
-      "publicada": "2026-08-10T20:00:39-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=90zn3xac9B1TyjJW5tOyqQ==",
-      "tipo": "LE",
-      "zona": "Biobío",
-      "comuna": "Cañete",
+      "zona": "Nacional",
+      "comuna": "Nacional",
       "keywords": [
         "alimentación",
-        "menaje"
+        "cafetería"
       ],
       "fuente": "Licitación",
       "monto_label": ""
     },
     {
-      "id": "483-39-L126",
-      "nombre": "Convenio suministro de Almuerzos de fines de semana Personal turnante Hospital de Contulmo",
-      "organismo": "SERVICIO DE SALUD CONCEPCION ARAUCO HOSPITAL DE CONTULMO - H Contulmo",
-      "publicada": "2026-08-07T20:22:26-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=g3wExLur70xH3YQ+SoyFDw==",
+      "id": "1536771-3-LE26",
+      "nombre": "ADQUISICIÓN DE 38 TOLDOS IMPRESOS",
+      "organismo": "DIRECCION DE LOGISTICA DE CARABINEROS - Depto Plan Cuadrante e Integración Comunitaria",
+      "publicada": "2026-08-12T15:58:47-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=bYiGjX+8aT2qcxO8kNB1RQ==",
+      "tipo": "LE",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": ""
+    },
+    {
+      "id": "4642-92-LP26",
+      "nombre": "Contratación del Servicio de Obras de Habilitación de La Sala de Estimulación Temprana del Centro Médico Y Dental de Rancagua Perteneciente a la Red Salud de Carabineros.",
+      "organismo": "DIRECCION DE LOGISTICA DE CARABINEROS - Fondos Hospitales",
+      "publicada": "2026-08-12T15:13:30-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=fiUIBnYd1LlhZ2HegZD/zw==",
+      "tipo": "LP",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": ""
+    },
+    {
+      "id": "2730-103-LE26",
+      "nombre": "Servicios Fiesta de la Chilenidad y Desfile Fiestas Patrias",
+      "organismo": "I MUNICIPALIDAD DE CASTRO - ILUSTRE MUNICIPALIDAD DE CASTRO",
+      "publicada": "2026-08-12T14:58:40-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=mXDOwr2GhtPjsfCUf+62JA==",
+      "tipo": "LE",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [
+        "fiestas patrias",
+        "chilenidad"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$18.200.000",
+      "fecha_cierre": "2026-08-20T15:00:00-04:00"
+    },
+    {
+      "id": "998782-5-L126",
+      "nombre": "SUM servicio de Coffe break Act Municipales",
+      "organismo": "I MUNICIPALIDAD DE LAS CABRAS - Administracion Municipal",
+      "publicada": "2026-08-12T13:12:35-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=pqodOZ25ECfNs3mByzhiLw==",
       "tipo": "",
-      "zona": "Gran Concepción",
-      "comuna": "Concepción",
+      "zona": "Nacional",
+      "comuna": "Nacional",
       "keywords": [
-        "alimentación",
-        "almuerzo"
+        "banquetería",
+        "coffee break"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-08-20T09:00:00-04:00"
+    },
+    {
+      "id": "1057509-231-LE26",
+      "nombre": "CONVENIO SUMINISTRO DE FRUTAS Y VERDURAS NATURALES”  brd",
+      "organismo": "HOSPITAL CLINICO HERMINDA MARTIN - Bienes y Servicios",
+      "publicada": "2026-08-12T12:01:48-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=dl0cVBPUDGh+ioZFoy/zdQ==",
+      "tipo": "LE",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "$29.534.027",
+      "fecha_cierre": "2026-08-19T09:00:00-04:00"
+    },
+    {
+      "id": "2730-98-L126",
+      "nombre": "Servicio alimentación y arriendo de local para Mes",
+      "organismo": "I MUNICIPALIDAD DE CASTRO - ILUSTRE MUNICIPALIDAD DE CASTRO",
+      "publicada": "2026-08-11T19:48:15-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=CDkh0Wr+IzJYDxupl26mCg==",
+      "tipo": "",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [
+        "catering",
+        "alimentación"
       ],
       "fuente": "Licitación",
       "monto_label": ""
+    },
+    {
+      "id": "1483-3-LE26",
+      "nombre": "CONTRATACION SERVICIO EIB",
+      "organismo": "SUBSECRETARIA DEL MINISTERIO DE EDUCACION PUBLICA - Departamento Provincial El Loa",
+      "publicada": "2026-08-11T15:44:00-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=qZYic0/0qPVeEmdLEsYEeA==",
+      "tipo": "LE",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": ""
+    },
+    {
+      "id": "1216088-16-LE26",
+      "nombre": "PRODUCCIÓN DE ESPACIO RECREATIVO",
+      "organismo": "CORPORACION MUNICIPAL DE DEPORTES DE PUENTE ALTO - OPERACIONES",
+      "publicada": "2026-08-11T15:27:00-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=MLAzlNQK3LbRKdIjQyQS/A==",
+      "tipo": "LE",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-08-21T18:00:00-04:00"
+    },
+    {
+      "id": "1950-43-LE26",
+      "nombre": "Lic 47-26 Concesión de casino y cafeterias H.P",
+      "organismo": "SERVICIO SALUD ARAUCANIA SUR HOSPITAL PITRUFQUEN - Hospital Pitrufquén",
+      "publicada": "2026-08-11T13:02:05-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=a3TnHZPOXICrW+beScPlYg==",
+      "tipo": "LE",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [
+        "alimentación",
+        "cafetería",
+        "casino"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$68.000.000",
+      "fecha_cierre": "2026-08-26T15:30:00-04:00"
+    },
+    {
+      "id": "4813-1-LE26",
+      "nombre": "CELEBRACION DE FIESTAS PATRIAS BIENESTAR 2026",
+      "organismo": "I MUNICIPALIDAD DE LA CRUZ - BIENESTAR MUNICIPAL",
+      "publicada": "2026-08-11T12:19:53-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=disK3PpUA0XCCT/Jj5XjWg==",
+      "tipo": "LE",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [
+        "alimentación",
+        "fiestas patrias"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$10.800.000",
+      "fecha_cierre": "2026-08-21T09:40:00-04:00"
     },
     {
       "id": "1271359-114-LE26",
@@ -124,6 +221,251 @@
       "monto_label": ""
     },
     {
+      "id": "2730-99-L126",
+      "nombre": "Servicios 3er Seminario Manzana Chilota",
+      "organismo": "I MUNICIPALIDAD DE CASTRO - ILUSTRE MUNICIPALIDAD DE CASTRO",
+      "publicada": "2026-08-10T22:49:16-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=lQWP0eJlID9gsiqzG/psHw==",
+      "tipo": "",
+      "zona": "Biobío",
+      "comuna": "Lota",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "$1.800.000",
+      "fecha_cierre": "2026-08-17T15:00:00-04:00"
+    },
+    {
+      "id": "3656-153-LE26",
+      "nombre": "ACTIVIDAD RECREATIVA SOCIAL",
+      "organismo": "I MUNICIPALIDAD DE REQUINOA - Ilustre Municipalidad de Requínoa",
+      "publicada": "2026-08-10T20:36:43-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=B6xdReM81KVzySWu4m5gNg==",
+      "tipo": "LE",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-08-20T10:00:00-04:00"
+    },
+    {
+      "id": "2101-101-LE26",
+      "nombre": "MENAJE DESTINADO A LA  CENTRAL DE ALIMENTACION",
+      "organismo": "HOSPITAL INTERCULTURAL KALLVU LLANKA.- - Hospital Cañete",
+      "publicada": "2026-08-10T20:00:39-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=90zn3xac9B1TyjJW5tOyqQ==",
+      "tipo": "LE",
+      "zona": "Biobío",
+      "comuna": "Cañete",
+      "keywords": [
+        "alimentación",
+        "menaje"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$11.500.000",
+      "fecha_cierre": "2026-08-20T15:10:00-04:00"
+    },
+    {
+      "id": "1350296-64-LP26",
+      "nombre": "CONVENIO DE SERVICIO DOMICILIARIO DE NUTRICIONES PARENTERALES MAGISTRALES PARA EL HOSPITAL DE ALTO HOSPICIO POR 12 MESES",
+      "organismo": "HOSPITAL DE ALTO HOSPICIO - ABASTECIMIENTO HAH",
+      "publicada": "2026-08-10T19:43:48-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=GU226OdumuzjsGvVQVs49w==",
+      "tipo": "LP",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": ""
+    },
+    {
+      "id": "4079-38-LE26",
+      "nombre": "CONTRATO SUMINISTRO ALIMENTOS PERC NOPERC Y DESC",
+      "organismo": "I MUNICIPALIDAD DE CABRERO - Administración y Finanzas",
+      "publicada": "2026-08-10T19:30:17-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=GVzcq2aLl+br60BSOwYC6A==",
+      "tipo": "LE",
+      "zona": "Biobío",
+      "comuna": "Cabrero",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": ""
+    },
+    {
+      "id": "2595-87-LE26",
+      "nombre": "ARRIENDO DE CARPAS Y OTROS PARA SEPTIEMBRE 2026",
+      "organismo": "I MUNICIPALIDAD DE PARRAL - I MUNICIPALIDAD DE PARRAL",
+      "publicada": "2026-08-10T17:31:07-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=GL7+Rarn7rKbz0O3vTfw1w==",
+      "tipo": "LE",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": ""
+    },
+    {
+      "id": "1591-15-LE26",
+      "nombre": "INSTRUMENTOS DESARROLLO DESTINOS TURÍSTICOS",
+      "organismo": "SERVICIO NACIONAL DE TURISMO - Servicio Nacional de Turismo - Sernatur",
+      "publicada": "2026-08-10T13:39:13-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=XwlWhuozMFHOtZ7sSKtAsg==",
+      "tipo": "LE",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "$58.996.000",
+      "fecha_cierre": "2026-08-20T15:30:00-04:00"
+    },
+    {
+      "id": "1057384-120-L126",
+      "nombre": "SERVICIO DE COFFE BREAK Y CHAPITAS PERZONALIZADAS",
+      "organismo": "SERVICIO DE SALUD ANTOFAGASTA HOSPITAL M - Bienes y Servicios",
+      "publicada": "2026-08-10T12:59:05-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=5vkYSHU/2gkQxKdqVyy7yg==",
+      "tipo": "",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [
+        "coffee break",
+        "cafetería"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-08-18T15:00:00-04:00"
+    },
+    {
+      "id": "1756-5-LE26",
+      "nombre": "ADQUISICIÓN DE SERVICIOS DE HOTELERÍA PROGRAMA EIB",
+      "organismo": "SUBSECRETARIA DEL MINISTERIO DE EDUCACION PUBLICA - Mineduc Administración VIII Región",
+      "publicada": "2026-08-10T12:39:43-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=7sFU7Du4IMDkwgoTt/Gbmw==",
+      "tipo": "LE",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [
+        "alimentación"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$19.000.000",
+      "fecha_cierre": "2026-08-24T20:00:00-04:00"
+    },
+    {
+      "id": "2292-52-L126",
+      "nombre": "“ADQUISICIÓN DEL SERVICIO DE COFFEE BREAK SALUDABLE PARA ACTIVIDADES COMUNITARIAS, DEL AÑO 2026”",
+      "organismo": "I MUNICIPALIDAD DE TALCA - DIR. COMUNAL DE SALUD",
+      "publicada": "2026-08-10T12:36:00-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=xdL0Ubfifyysru19R5lNQw==",
+      "tipo": "",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [
+        "coffee break"
+      ],
+      "fuente": "Licitación",
+      "monto_label": ""
+    },
+    {
+      "id": "4778-16-LR26",
+      "nombre": "SERVICIO ALIMENTACION CASINO DEL HOSPITAL REGIONAL COYHAIQUE",
+      "organismo": "SERVICIO NACIONAL DE SALUD HOSPITAL DE C - Compras de Insumos y Servicios Generales",
+      "publicada": "2026-08-10T11:57:05-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=nsqnzrOVfNQI+q55lIqZ3w==",
+      "tipo": "LR",
+      "zona": "Biobío",
+      "comuna": "Lota",
+      "keywords": [
+        "alimentación",
+        "casino"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-09-09T17:30:00-04:00"
+    },
+    {
+      "id": "1045-5-LE26",
+      "nombre": "ARRIENDO INT DE SALON Y CATERING PARA 150 PERSONAS",
+      "organismo": "MINISTERIO DE OBRAS PUBLICAS DIREC CION GRAL DE OO PP DCYF - Dirección General de Aguas - XV Región de Arica",
+      "publicada": "2026-08-07T20:28:00-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=vc/oUdV29/9wGZYYhdFoQQ==",
+      "tipo": "LE",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [
+        "catering"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$10.000.000",
+      "fecha_cierre": "2026-08-14T15:04:00-04:00"
+    },
+    {
+      "id": "483-39-L126",
+      "nombre": "Convenio suministro de Almuerzos de fines de semana Personal turnante Hospital de Contulmo",
+      "organismo": "SERVICIO DE SALUD CONCEPCION ARAUCO HOSPITAL DE CONTULMO - H Contulmo",
+      "publicada": "2026-08-07T20:22:26-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=g3wExLur70xH3YQ+SoyFDw==",
+      "tipo": "",
+      "zona": "Gran Concepción",
+      "comuna": "Concepción",
+      "keywords": [
+        "alimentación",
+        "almuerzo"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$4.270.000",
+      "fecha_cierre": "2026-08-14T21:22:00-04:00"
+    },
+    {
+      "id": "5667-9-LE26",
+      "nombre": "Contrato de Suministro de Servicios de Banquetería",
+      "organismo": "SUBSECRETARIA DEL MINISTERIO DE EDUCACION PUBLICA - Secretaría Ministerial de Educación Arica y Parinacota",
+      "publicada": "2026-08-07T20:17:45-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=rsAZYZQ4mQS2H54uhrFvZg==",
+      "tipo": "LE",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [
+        "catering",
+        "banquetería"
+      ],
+      "fuente": "Licitación",
+      "monto_label": ""
+    },
+    {
+      "id": "1213301-9-LE26",
+      "nombre": "Producción de evento Parque de la Chilenidad 2026",
+      "organismo": "ILUSTRE MUNICIPALIDAD DE QUILLON - OFICINA DE TURISMO Y CULTURA",
+      "publicada": "2026-08-07T19:53:06-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=OEWLT96PECdgEShRX+u6aA==",
+      "tipo": "LE",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [
+        "producción de eventos",
+        "producción",
+        "chilenidad"
+      ],
+      "fuente": "Licitación",
+      "monto_label": ""
+    },
+    {
+      "id": "1210-21-LE26",
+      "nombre": "Serv. Integral y pack materiales jornada regional coordinadores Minuta 3634.",
+      "organismo": "SUBSECRETARIA DEL MINISTERIO DE EDUCACION PUBLICA - Mineduc Administración IV Región",
+      "publicada": "2026-08-07T19:47:03-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=akXAytM1xwQ77GP6Hz7q3A==",
+      "tipo": "LE",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [
+        "alimentación"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-08-18T15:00:00-04:00"
+    },
+    {
       "id": "2770-119-LE26",
       "nombre": "SERVICIO DE COFFEE BREAK PARA ACTIVIDADES PROTOCOLARES DE LA MUNICIPALIDAD DE MAIPÚ",
       "organismo": "I MUNICIPALIDAD DE MAIPU - I MUNICIPALIDAD DE MAIPU",
@@ -135,6 +477,82 @@
       "keywords": [
         "coffee break",
         "alimentación"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$30.000.000",
+      "fecha_cierre": "2026-08-26T15:00:00-04:00"
+    },
+    {
+      "id": "1210-20-LE26",
+      "nombre": "Serv. Integral y pack materiales jornadas profesional docente Minuta 3562.",
+      "organismo": "SUBSECRETARIA DEL MINISTERIO DE EDUCACION PUBLICA - Mineduc Administración IV Región",
+      "publicada": "2026-08-07T18:58:12-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=9oJcgblxM3rJAwy/yXsS4A==",
+      "tipo": "LE",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [
+        "alimentación"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-08-18T15:00:00-04:00"
+    },
+    {
+      "id": "1543-3-LE26",
+      "nombre": "CATERING PARA DISTINTAS JORNADAS",
+      "organismo": "SUBSECRETARIA DEL MINISTERIO DE EDUCACION PUBLICA - Departamento Provincial Quillota-Petorca",
+      "publicada": "2026-08-07T18:36:00-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=Po41+2uxY3VDtELbguzrBw==",
+      "tipo": "LE",
+      "zona": "Biobío",
+      "comuna": "Lota",
+      "keywords": [
+        "catering",
+        "alimentación"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-08-13T09:00:00-04:00"
+    },
+    {
+      "id": "3537-42-LE26",
+      "nombre": "Suministro anual de alimentos",
+      "organismo": "DIVISION LOGISTICA DEL EJERCITO - Cuerpo Militar del Trabajo Subjef Zonal Pto. Montt",
+      "publicada": "2026-08-07T18:29:51-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=5Dy8H/Wt470XXLyQFBo1fA==",
+      "tipo": "LE",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": ""
+    },
+    {
+      "id": "3537-43-LE26",
+      "nombre": "Suministro anual de carnes y congelados",
+      "organismo": "DIVISION LOGISTICA DEL EJERCITO - Cuerpo Militar del Trabajo Subjef Zonal Pto. Montt",
+      "publicada": "2026-08-07T18:27:47-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=eegfIqoZAG7LEgmYFwPV2Q==",
+      "tipo": "LE",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "$50.000.000",
+      "fecha_cierre": "2026-08-17T15:01:00-04:00"
+    },
+    {
+      "id": "948-22-L126",
+      "nombre": "SERVICIO DE COFFEE BREAK JORNADAS DEPARTAMENTO EDUCACIÓN",
+      "organismo": "SUBSECRETARIA DEL MINISTERIO DE EDUCACION PUBLICA - Mineduc Administración I Región",
+      "publicada": "2026-08-07T18:21:48-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=dO1lPhI0wjpfE69P2fnX9w==",
+      "tipo": "",
+      "zona": "Nacional",
+      "comuna": "Nacional",
+      "keywords": [
+        "coffee break"
       ],
       "fuente": "Licitación",
       "monto_label": ""
