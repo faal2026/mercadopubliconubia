@@ -55,8 +55,8 @@ BIOBIO = [
     "NACIMIENTO", "MULCHEN", "MULCHÉN", "ARAUCO", "CAÑETE", "CANETE",
     "CURANILAHUE", "LEBU", "CONTULMO", "TIRUA", "TIRÚA", "LOS ALAMOS",
     "SAN ROSENDO", "QUILLECO", "ANTUCO", "TUCAPEL", "NEGRETE", "QUILACO",
-    "FLORIDA", "BIO BIO", "BIOBIO", "BÍO-BÍO", "BIO-BÍO", "BÍO BÍO",
-    "REGION DEL BIO", "REGIÓN DEL BÍO",
+    "BIO BIO", "BIOBIO", "BÍO-BÍO", "BIO-BÍO", "BÍO BÍO",
+    "REGION DEL BIO", "REGIÓN DEL BÍO", "VIII REGION", "VIII REGIÓN",
 ]
 
 # Palabras clave que confirman que la oportunidad es de banqueteria / eventos.
@@ -141,13 +141,19 @@ def normalize_date(pub):
         return pub
 
 
+def _palabra(token, texto):
+    """True si token aparece como palabra/frase completa (no como fragmento)."""
+    patron = r"(?<![0-9A-Za-zÁÉÍÓÚÜÑáéíóúüñ])" + re.escape(token) + r"(?![0-9A-Za-zÁÉÍÓÚÜÑáéíóúüñ])"
+    return re.search(patron, texto) is not None
+
+
 def zona_de(texto):
     t = (texto or "").upper()
     for k in GRAN_CONCEPCION:
-        if k in t:
+        if _palabra(k, t):
             return "Gran Concepción"
     for k in BIOBIO:
-        if k in t:
+        if _palabra(k, t):
             return "Biobío"
     return "Nacional"
 
@@ -163,7 +169,7 @@ def comuna_de(texto, zona):
         "ARAUCO": "Arauco", "CAÑETE": "Cañete", "CONTULMO": "Contulmo",
     }
     for k, v in nombres.items():
-        if k in t:
+        if _palabra(k, t):
             return v
     return zona
 
@@ -252,8 +258,8 @@ def main():
         vistos.add(it["id"])
 
         blob = f"{it['organismo']} {it['nombre']} {it['descripcion']}"
-        it["zona"] = zona_de(it["organismo"] + " " + it["descripcion"])
-        it["comuna"] = comuna_de(it["organismo"] + " " + it["descripcion"], it["zona"])
+        it["zona"] = zona_de(it["organismo"])
+        it["comuna"] = comuna_de(it["organismo"], it["zona"])
         it["keywords"] = keywords_de(blob)
         it["fuente"] = "Licitación"
         it["monto_label"] = it.get("monto_label", "")
