@@ -1,8 +1,8 @@
 {
-  "generado": "2026-08-13T07:38:40.783972-04:00",
+  "generado": "2026-08-13T10:08:06.949165-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 3,
+  "total": 2,
   "oportunidades": [
     {
       "id": "2101-101-LE26",
@@ -34,22 +34,6 @@
       "fuente": "Licitación",
       "monto_label": "",
       "fecha_cierre": "2026-08-20T15:00:00-04:00"
-    },
-    {
-      "id": "1756-5-LE26",
-      "nombre": "ADQUISICIÓN DE SERVICIOS DE HOTELERÍA PROGRAMA EIB",
-      "organismo": "SUBSECRETARIA DEL MINISTERIO DE EDUCACION PUBLICA - Mineduc Administración VIII Región",
-      "publicada": "2026-08-10T12:39:43-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=7sFU7Du4IMDkwgoTt/Gbmw==",
-      "tipo": "LE",
-      "zona": "Biobío",
-      "comuna": "Biobío",
-      "keywords": [
-        "alimentación"
-      ],
-      "fuente": "Licitación",
-      "monto_label": "$19.000.000",
-      "fecha_cierre": "2026-08-24T20:00:00-04:00"
     }
   ]
 }
