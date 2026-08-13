@@ -20,6 +20,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Instalar dependencias
+        run: pip install openpyxl
+
       - name: Correr el motor
         env:
           MP_ORGCODE: "891391"
