@@ -52,6 +52,7 @@
   .row1{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:7px}
   .badge{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:500;letter-spacing:.04em;padding:3px 8px;border-radius:6px;text-transform:uppercase}
   .badge.tipo{background:#EAEBF6;color:#4B54A6}
+  .badge.ca{background:#FBEEDD;color:#B5720F}
   .zona{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:500;padding:3px 8px;border-radius:6px}
   .zona.gc{background:#E1F0F2;color:var(--petrol)} .zona.bb{background:#E3F3F0;color:var(--teal)} .zona.na{background:#EEF0F1;color:var(--gray)}
   .idcode{font-family:"IBM Plex Mono",monospace;font-size:11px;color:#98A4A9;margin-left:auto}
@@ -96,7 +97,7 @@
         <span>Actualizado <b id="m-updated">—</b></span>
         <span class="dot">·</span><span><b id="m-total">0</b> licitaciones</span>
         <span class="dot">·</span><span><b id="m-gc">0</b> Gran Concepción</span>
-        <span class="dot">·</span><span><b id="m-bb">0</b> Biobío</span>
+        <span class="dot">·</span><span><b id="m-bb">0</b> Compra Ágil</span>
       </div>
     </div>
   </header>
@@ -117,6 +118,11 @@
           <option value="comuna">Comuna (A–Z)</option>
         </select>
       </div>
+      <div class="filters" role="group" aria-label="Fuente" style="margin-top:8px">
+        <button class="chip" data-fuente="todas" aria-pressed="true">Todas</button>
+        <button class="chip" data-fuente="lic" aria-pressed="false">Licitaciones</button>
+        <button class="chip" data-fuente="ca" aria-pressed="false">Compra Ágil</button>
+      </div>
     </div>
 
     <div class="countline"><span id="count">—</span><span id="echo"></span></div>
@@ -135,7 +141,7 @@
   var mem={};
   var store={get:function(k){try{return localStorage.getItem(k)}catch(e){return mem[k]||null}},
              set:function(k,v){try{localStorage.setItem(k,v)}catch(e){mem[k]=v}}};
-  var DATA=[], META={}, ui={zona:"bb",q:"",sort:"pub"};
+  var DATA=[], META={}, ui={zona:"bb",q:"",sort:"pub",fuente:"todas"};
 
   function horas(it){
     if(!it.fecha_cierre) return null;
@@ -169,6 +175,8 @@
   function pasa(it){
     if(ui.zona==="gc" && it.zona!=="Gran Concepción") return false;
     if(ui.zona==="bb" && !(it.zona==="Gran Concepción"||it.zona==="Biobío")) return false;
+    if(ui.fuente==="lic" && it.fuente!=="Licitación") return false;
+    if(ui.fuente==="ca" && it.fuente!=="Compra Ágil") return false;
     if(store.get("st:"+it.id)==="descartar") return false;
     if(ui.q){var hay=(it.nombre+" "+it.organismo+" "+(it.keywords||[]).join(" ")+" "+it.comuna).toLowerCase();
       if(hay.indexOf(ui.q.toLowerCase())===-1) return false;}
@@ -191,7 +199,7 @@
       '<div class="rail '+r.cls+'"><span class="num">'+r.num+'</span><span class="lab">'+r.lab+'</span></div>'+
       '<div class="body"><div class="row1">'+
         '<span class="zona '+zc(it.zona)+'">'+esc(it.zona)+'</span>'+
-        (it.tipo?'<span class="badge tipo">'+esc(it.tipo)+'</span>':'')+
+        '<span class="badge '+(it.fuente==="Compra Ágil"?"ca":"tipo")+'">'+esc(it.fuente==="Compra Ágil"?"Compra Ágil":(it.tipo||"Licitación"))+'</span>'+
         '<span class="idcode">'+esc(it.id)+'</span></div>'+
         '<h2 class="title">'+hl(it.nombre,ui.q)+'</h2>'+
         '<p class="org">'+esc(it.organismo)+'</p>'+
@@ -217,10 +225,10 @@
   }
   function meta(){
     var gc=DATA.filter(function(o){return o.zona==="Gran Concepción"}).length;
-    var bb=DATA.filter(function(o){return o.zona==="Biobío"}).length;
+    var ca=DATA.filter(function(o){return o.fuente==="Compra Ágil"}).length;
     document.getElementById("m-total").textContent=DATA.length;
     document.getElementById("m-gc").textContent=gc;
-    document.getElementById("m-bb").textContent=bb;
+    document.getElementById("m-bb").textContent=ca;
     if(META.orgcode)document.getElementById("m-org").textContent=META.orgcode;
     var u=META.generado?new Date(META.generado):new Date();
     document.getElementById("m-updated").textContent=u.toLocaleString("es-CL",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
@@ -231,6 +239,9 @@
   document.querySelectorAll('.chip[data-zona]').forEach(function(c){c.addEventListener("click",function(){
     document.querySelectorAll('.chip[data-zona]').forEach(function(o){o.setAttribute("aria-pressed","false")});
     c.setAttribute("aria-pressed","true"); ui.zona=c.getAttribute("data-zona"); render();});});
+  document.querySelectorAll('.chip[data-fuente]').forEach(function(c){c.addEventListener("click",function(){
+    document.querySelectorAll('.chip[data-fuente]').forEach(function(o){o.setAttribute("aria-pressed","false")});
+    c.setAttribute("aria-pressed","true"); ui.fuente=c.getAttribute("data-fuente"); render();});});
   document.getElementById("sort").addEventListener("change",function(e){ui.sort=e.target.value;render()});
   var t; document.getElementById("search").addEventListener("input",function(e){clearTimeout(t);t=setTimeout(function(){ui.q=e.target.value.trim();render()},120)});
 
