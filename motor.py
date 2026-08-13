@@ -349,12 +349,31 @@ def fetch_compra_agil():
 
 
 def _ca_fecha(v):
-    """xlsx puede traer datetime o texto; normaliza a ISO -04:00."""
+    """Normaliza fechas de los xlsx (datetime, ISO, o dd/mm/aaaa) a ISO -04:00."""
     if v is None:
         return ""
     if isinstance(v, datetime):
         return v.replace(tzinfo=TZ_CL).isoformat()
-    return normalize_date(str(v))
+    s = str(v).strip()
+    for fmt in ("%d/%m/%Y %H:%M", "%d/%m/%Y %H:%M:%S", "%d/%m/%Y"):
+        try:
+            return datetime.strptime(s, fmt).replace(tzinfo=TZ_CL).isoformat()
+        except Exception:
+            pass
+    return normalize_date(s)
+
+
+def _abrir_libro(ruta):
+    """Abre un xlsx aunque tenga extensión .xls (el buscador exporta así).
+    Detecta el contenido OOXML (empieza con 'PK') y lo abre desde memoria,
+    saltando la validación por extensión de openpyxl."""
+    import io
+    import openpyxl
+    with open(ruta, "rb") as f:
+        data = f.read()
+    if data[:2] != b"PK":
+        raise ValueError("no es un Excel moderno (OOXML)")
+    return openpyxl.load_workbook(io.BytesIO(data), data_only=True)
 
 
 def convert_ca_xlsx():
@@ -363,17 +382,18 @@ def convert_ca_xlsx():
     y escribe compra_agil.json. También acepta un compra_agil.xlsx suelto en la raíz."""
     import glob
     carpeta = os.environ.get("MP_CA_DIR", "compra_agil")
-    archivos = sorted(glob.glob(os.path.join(carpeta, "*.xlsx")))
+    archivos = sorted(glob.glob(os.path.join(carpeta, "*.xls")) +
+                      glob.glob(os.path.join(carpeta, "*.xlsx")))
     suelto = os.environ.get("MP_CA_XLSX", "compra_agil.xlsx")
     if os.path.exists(suelto):
         archivos.append(suelto)
     # ignorar temporales de Excel (~$...)
     archivos = [a for a in archivos if not os.path.basename(a).startswith("~$")]
     if not archivos:
-        log(f"Compra Ágil: no hay xlsx en '{carpeta}/' (sube ahí los exports del buscador).")
+        log(f"Compra Ágil: no hay xlsx/xls en '{carpeta}/' (sube ahí los exports del buscador).")
         return
     try:
-        import openpyxl
+        import openpyxl  # noqa: F401
     except ImportError:
         log("Compra Ágil: falta openpyxl; no pude leer los xlsx.")
         return
@@ -382,7 +402,7 @@ def convert_ca_xlsx():
     leidos = 0
     for ruta in archivos:
         try:
-            wb = openpyxl.load_workbook(ruta, read_only=True, data_only=True)
+            wb = _abrir_libro(ruta)
         except Exception as e:
             log("Compra Ágil: no pude abrir", os.path.basename(ruta), "-", e)
             continue
@@ -401,8 +421,10 @@ def convert_ca_xlsx():
         ci = {
             "id": col("id"), "nombre": col("nombre"),
             "pub": col("fecha de publicación", "fecha de publicacion"),
-            "cierre": col("fecha de cierre"), "org": col("organismo"),
-            "uni": col("unidad"), "monto": col("monto disponible"),
+            "cierre": col("fecha de cierre"),
+            "org": col("organismo", "institución", "institucion"),
+            "uni": col("unidad", "unidad de compra"),
+            "monto": col("monto disponible", "presupuesto estimado", "presupuesto"),
             "estado": col("estado"),
         }
         if ci["id"] < 0:
