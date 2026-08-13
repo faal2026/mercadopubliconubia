@@ -348,6 +348,111 @@ def fetch_compra_agil():
     return items
 
 
+def _ca_fecha(v):
+    """xlsx puede traer datetime o texto; normaliza a ISO -04:00."""
+    if v is None:
+        return ""
+    if isinstance(v, datetime):
+        return v.replace(tzinfo=TZ_CL).isoformat()
+    return normalize_date(str(v))
+
+
+def convert_ca_xlsx():
+    """Lee TODOS los xlsx de la carpeta compra_agil/ (exports del buscador),
+    los junta, quita duplicados, filtra Biobío y solo las 'Publicada' (abiertas),
+    y escribe compra_agil.json. También acepta un compra_agil.xlsx suelto en la raíz."""
+    import glob
+    carpeta = os.environ.get("MP_CA_DIR", "compra_agil")
+    archivos = sorted(glob.glob(os.path.join(carpeta, "*.xlsx")))
+    suelto = os.environ.get("MP_CA_XLSX", "compra_agil.xlsx")
+    if os.path.exists(suelto):
+        archivos.append(suelto)
+    # ignorar temporales de Excel (~$...)
+    archivos = [a for a in archivos if not os.path.basename(a).startswith("~$")]
+    if not archivos:
+        log(f"Compra Ágil: no hay xlsx en '{carpeta}/' (sube ahí los exports del buscador).")
+        return
+    try:
+        import openpyxl
+    except ImportError:
+        log("Compra Ágil: falta openpyxl; no pude leer los xlsx.")
+        return
+
+    out, vistos = [], set()
+    leidos = 0
+    for ruta in archivos:
+        try:
+            wb = openpyxl.load_workbook(ruta, read_only=True, data_only=True)
+        except Exception as e:
+            log("Compra Ágil: no pude abrir", os.path.basename(ruta), "-", e)
+            continue
+        ws = wb.active
+        rows = list(ws.iter_rows(values_only=True))
+        if len(rows) < 2:
+            continue
+        hdr = [str(h or "").strip().lower() for h in rows[0]]
+
+        def col(*names):
+            for n in names:
+                if n in hdr:
+                    return hdr.index(n)
+            return -1
+
+        ci = {
+            "id": col("id"), "nombre": col("nombre"),
+            "pub": col("fecha de publicación", "fecha de publicacion"),
+            "cierre": col("fecha de cierre"), "org": col("organismo"),
+            "uni": col("unidad"), "monto": col("monto disponible"),
+            "estado": col("estado"),
+        }
+        if ci["id"] < 0:
+            log("Compra Ágil:", os.path.basename(ruta), "no parece un export válido (sin columna ID).")
+            continue
+        leidos += 1
+
+        def g(r, k):
+            i = ci[k]
+            return r[i] if (0 <= i < len(r)) else None
+
+        for r in rows[1:]:
+            estado = str(g(r, "estado") or "").strip().lower()
+            if estado and estado != "publicada":
+                continue
+            idc = str(g(r, "id") or "").strip()
+            if not idc or idc in vistos:
+                continue
+            org = str(g(r, "org") or "").strip()
+            uni = g(r, "uni")
+            if uni:
+                org = f"{org} - {uni}"
+            nombre = str(g(r, "nombre") or "").strip()
+            z = zona_de(org + " " + nombre)
+            if z == "Nacional":
+                continue
+            vistos.add(idc)
+            monto = g(r, "monto")
+            try:
+                ml = ("$" + f"{int(monto):,}".replace(",", ".")) if monto else ""
+            except Exception:
+                ml = ""
+            out.append({
+                "id": idc, "nombre": nombre, "organismo": org, "zona": z,
+                "comuna": comuna_de(org, z), "tipo": "Compra Ágil", "fuente": "Compra Ágil",
+                "publicada": _ca_fecha(g(r, "pub")), "fecha_cierre": _ca_fecha(g(r, "cierre")),
+                "link": "https://buscador.mercadopublico.cl/compra-agil",
+                "keywords": keywords_de(org + " " + nombre), "monto_label": ml,
+            })
+
+    payload = {
+        "generado": datetime.now(TZ_CL).isoformat(),
+        "fuente": "Compra Ágil (export buscador)",
+        "archivos": leidos, "total": len(out), "oportunidades": out,
+    }
+    with open("compra_agil.json", "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+    log(f"Compra Ágil: {leidos} xlsx leídos → {len(out)} abiertas en Biobío → compra_agil.json")
+
+
 def main():
     xml_text = fetch_feed()
     base = parse_feed(xml_text)
@@ -384,30 +489,9 @@ def main():
 
     log("descartadas por fuera de Biobío:", descartadas)
 
-    # --- Compra Ágil (fuente independiente, ya trae cierre y monto) ---
-    ca = fetch_compra_agil() if CA_ACTIVO else []
-    if not CA_ACTIVO:
-        log("Compra Ágil: desactivada (MP_CA_ACTIVO=0). Solo licitaciones.")
-    ca_desc = 0
-    for it in ca:
-        if it["id"] in vistos:
-            continue
-        vistos.add(it["id"])
-        blob = f"{it['organismo']} {it['nombre']} {it['descripcion']}"
-        it["zona"] = zona_de(it["organismo"])
-        it["comuna"] = comuna_de(it["organismo"], it["zona"])
-        if it["zona"] == "Nacional" and zona_de(blob) != "Nacional":
-            it["zona"] = zona_de(blob)
-            it["comuna"] = comuna_de(blob, it["zona"])
-        if it["zona"] == "Nacional":
-            ca_desc += 1
-            continue
-        it["keywords"] = keywords_de(blob)
-        it["fuente"] = "Compra Ágil"
-        it.pop("descripcion", None)
-        out.append(it)
-    log("Compra Ágil en Biobío:", len([o for o in out if o["fuente"] == "Compra Ágil"]),
-        "| descartadas fuera de zona:", ca_desc)
+    # --- Compra Ágil: se genera aparte (compra_agil.json) desde los xlsx
+    #     que subes a la carpeta compra_agil/. El tablero lo fusiona solo. ---
+    convert_ca_xlsx()
 
     # enriquecer con API solo las LICITACIONES (Compra Ágil ya viene completa)
     if TICKET:
