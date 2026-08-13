@@ -1,8 +1,8 @@
 {
-  "generado": "2026-08-12T14:59:00.364374-04:00",
+  "generado": "2026-08-12T20:22:20.248172-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 4,
+  "total": 3,
   "oportunidades": [
     {
       "id": "2101-101-LE26",
@@ -50,23 +50,6 @@
       "fuente": "Licitación",
       "monto_label": "$19.000.000",
       "fecha_cierre": "2026-08-24T20:00:00-04:00"
-    },
-    {
-      "id": "483-39-L126",
-      "nombre": "Convenio suministro de Almuerzos de fines de semana Personal turnante Hospital de Contulmo",
-      "organismo": "SERVICIO DE SALUD CONCEPCION ARAUCO HOSPITAL DE CONTULMO - H Contulmo",
-      "publicada": "2026-08-07T20:22:26-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=g3wExLur70xH3YQ+SoyFDw==",
-      "tipo": "",
-      "zona": "Gran Concepción",
-      "comuna": "Concepción",
-      "keywords": [
-        "alimentación",
-        "almuerzo"
-      ],
-      "fuente": "Licitación",
-      "monto_label": "$4.270.000",
-      "fecha_cierre": "2026-08-14T21:22:00-04:00"
     }
   ]
 }
