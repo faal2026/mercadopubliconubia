@@ -41,6 +41,10 @@ FEED_URL = f"https://www.mercadopublico.cl/Portal/feed.aspx?OrgCode={ORGCODE}"
 API_URL  = "https://api.mercadopublico.cl/servicios/v1/publico/licitaciones.json"
 
 # Compra Agil: API publica del buscador (sin ticket). Filtra por palabra clave.
+# NOTA: el endpoint bloquea peticiones de servidores (403). Por eso, desde
+# GitHub Actions esta parte se deja DESACTIVADA. Se reactiva poniendo
+# MP_CA_ACTIVO=1 (util cuando se ejecute desde un navegador real).
+CA_ACTIVO    = os.environ.get("MP_CA_ACTIVO", "0") == "1"
 CA_URL       = "https://api.buscador.mercadopublico.cl/compra-agil"
 CA_DIAS      = int(os.environ.get("MP_CA_DIAS", "6"))       # ventana hacia atras
 CA_MAX_PAGES = int(os.environ.get("MP_CA_MAX_PAGES", "6"))  # tope de paginas por keyword
@@ -381,7 +385,9 @@ def main():
     log("descartadas por fuera de Biobío:", descartadas)
 
     # --- Compra Ágil (fuente independiente, ya trae cierre y monto) ---
-    ca = fetch_compra_agil()
+    ca = fetch_compra_agil() if CA_ACTIVO else []
+    if not CA_ACTIVO:
+        log("Compra Ágil: desactivada (MP_CA_ACTIVO=0). Solo licitaciones.")
     ca_desc = 0
     for it in ca:
         if it["id"] in vistos:
