@@ -28,7 +28,8 @@ import sys
 import time
 import urllib.request
 import urllib.error
-from datetime import datetime, timezone, timedelta
+import urllib.parse
+from datetime import datetime, timezone, timedelta, date
 from xml.etree import ElementTree as ET
 
 ORGCODE   = os.environ.get("MP_ORGCODE", "891391")
@@ -38,6 +39,25 @@ OUT       = os.environ.get("MP_OUT", "data.json")
 
 FEED_URL = f"https://www.mercadopublico.cl/Portal/feed.aspx?OrgCode={ORGCODE}"
 API_URL  = "https://api.mercadopublico.cl/servicios/v1/publico/licitaciones.json"
+
+# Compra Agil: API publica del buscador (sin ticket). Filtra por palabra clave.
+CA_URL       = "https://api.buscador.mercadopublico.cl/compra-agil"
+CA_DIAS      = int(os.environ.get("MP_CA_DIAS", "6"))       # ventana hacia atras
+CA_MAX_PAGES = int(os.environ.get("MP_CA_MAX_PAGES", "6"))  # tope de paginas por keyword
+CA_KEYWORDS  = [
+    "COFFEE BREAK", "CATERING", "BANQUETERIA", "ALIMENTACION",
+    "COCTEL", "EMPANADA", "ALMUERZO", "COLACION", "CAFETERIA",
+]
+
+# Cabeceras de navegador real: el endpoint tiene deteccion de bots.
+CA_HEADERS = {
+    "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                   "AppleWebKit/537.36 (KHTML, like Gecko) "
+                   "Chrome/126.0.0.0 Safari/537.36"),
+    "Accept": "application/json, text/plain, */*",
+    "Origin": "https://buscador.mercadopublico.cl",
+    "Referer": "https://buscador.mercadopublico.cl/",
+}
 
 # Chile usa UTC-4 (o -3 en verano). El feed entrega hora local sin zona;
 # la tratamos como -04:00 de forma estable para el conteo.
@@ -129,10 +149,10 @@ def tipo_from_code(code):
 
 
 def normalize_date(pub):
-    # "2026-08-12T17:18:33.360" -> ISO con zona -04:00
+    # "2026-08-12T17:18:33.360" o "2026-08-14 15:00:00" -> ISO con zona -04:00
     if not pub:
         return ""
-    pub = pub.strip().replace("Z", "")
+    pub = pub.strip().replace("Z", "").replace(" ", "T")
     try:
         dt = datetime.fromisoformat(pub.split(".")[0])
         dt = dt.replace(tzinfo=TZ_CL)
@@ -245,6 +265,85 @@ def enrich_api(item):
         time.sleep(API_PAUSA)   # ritmo suave entre consultas
 
 
+def _ca_get(url):
+    """GET al buscador de Compra Agil con cabeceras de navegador y reintentos."""
+    espera = 5
+    for intento in range(4):
+        try:
+            req = urllib.request.Request(url, headers=CA_HEADERS)
+            with urllib.request.urlopen(req, timeout=45) as r:
+                return json.loads(r.read().decode("utf-8", errors="replace"))
+        except urllib.error.HTTPError as e:
+            if e.code in (429, 403) and intento < 3:
+                log(f"CA {e.code}, esperando {espera}s...")
+                time.sleep(espera)
+                espera *= 2
+                continue
+            log("CA HTTPError", e.code, "-", url[:80])
+            return None
+        except Exception as e:
+            log("CA error:", e)
+            return None
+    return None
+
+
+def fetch_compra_agil():
+    """Consulta Compra Agil por cada palabra clave y devuelve items (solo abiertas)."""
+    hoy = date.today()
+    dfrom = (hoy - timedelta(days=CA_DIAS)).isoformat()
+    dto = hoy.isoformat()
+    vistos = set()
+    items = []
+    bloqueado = True
+
+    for kw in CA_KEYWORDS:
+        page = 1
+        while page <= CA_MAX_PAGES:
+            q = urllib.parse.urlencode({
+                "date_from": dfrom, "date_to": dto, "keywords": kw,
+                "order_by": "recent", "status": "2",   # 2 = Publicada (abierta)
+                "page": page, "pageSize": 100,
+            })
+            data = _ca_get(f"{CA_URL}?{q}")
+            if data is None:
+                break
+            bloqueado = False
+            payload = data.get("payload") or {}
+            res = payload.get("resultados") or []
+            for r in res:
+                cod = r.get("codigo") or str(r.get("id", ""))
+                if not cod or cod in vistos:
+                    continue
+                vistos.add(cod)
+                org = (r.get("organismo") or "").strip()
+                if r.get("unidad"):
+                    org = f"{org} - {r['unidad']}"
+                monto = r.get("monto_disponible_CLP") or r.get("monto_disponible")
+                items.append({
+                    "id": cod,
+                    "nombre": (r.get("nombre") or "").strip(),
+                    "organismo": org,
+                    "descripcion": (r.get("nombre") or ""),
+                    "publicada": normalize_date(r.get("fecha_publicacion") or ""),
+                    "fecha_cierre": normalize_date(r.get("fecha_cierre") or ""),
+                    "link": "https://buscador.mercadopublico.cl/compra-agil",
+                    "tipo": "Compra Ágil",
+                    "monto_label": (f"${int(monto):,}".replace(",", ".") if monto else ""),
+                })
+            pc = payload.get("pageCount") or 1
+            if page >= pc:
+                break
+            page += 1
+            time.sleep(1.5)
+        time.sleep(1.0)
+
+    if bloqueado:
+        log("Compra Agil: el endpoint no respondio (posible bloqueo).")
+    else:
+        log("Compra Agil: recolectadas", len(items), "solicitudes (antes de filtrar zona)")
+    return items
+
+
 def main():
     xml_text = fetch_feed()
     base = parse_feed(xml_text)
@@ -281,11 +380,35 @@ def main():
 
     log("descartadas por fuera de Biobío:", descartadas)
 
-    # enriquecer con API solo si hay ticket (para no gastar cuota sin necesidad)
+    # --- Compra Ágil (fuente independiente, ya trae cierre y monto) ---
+    ca = fetch_compra_agil()
+    ca_desc = 0
+    for it in ca:
+        if it["id"] in vistos:
+            continue
+        vistos.add(it["id"])
+        blob = f"{it['organismo']} {it['nombre']} {it['descripcion']}"
+        it["zona"] = zona_de(it["organismo"])
+        it["comuna"] = comuna_de(it["organismo"], it["zona"])
+        if it["zona"] == "Nacional" and zona_de(blob) != "Nacional":
+            it["zona"] = zona_de(blob)
+            it["comuna"] = comuna_de(blob, it["zona"])
+        if it["zona"] == "Nacional":
+            ca_desc += 1
+            continue
+        it["keywords"] = keywords_de(blob)
+        it["fuente"] = "Compra Ágil"
+        it.pop("descripcion", None)
+        out.append(it)
+    log("Compra Ágil en Biobío:", len([o for o in out if o["fuente"] == "Compra Ágil"]),
+        "| descartadas fuera de zona:", ca_desc)
+
+    # enriquecer con API solo las LICITACIONES (Compra Ágil ya viene completa)
     if TICKET:
-        log("enriqueciendo con API (ticket presente)...")
+        log("enriqueciendo licitaciones con API (ticket presente)...")
         for it in out:
-            enrich_api(it)
+            if it.get("fuente") == "Licitación":
+                enrich_api(it)
 
     payload = {
         "generado": datetime.now(TZ_CL).isoformat(),
@@ -298,10 +421,10 @@ def main():
         json.dump(payload, f, ensure_ascii=False, indent=2)
     log("escrito", OUT, "con", len(out), "oportunidades")
 
-    # resumen por zona
+    # resumen
     from collections import Counter
-    c = Counter(o["zona"] for o in out)
-    log("por zona:", dict(c))
+    log("por zona:", dict(Counter(o["zona"] for o in out)))
+    log("por fuente:", dict(Counter(o["fuente"] for o in out)))
 
 
 if __name__ == "__main__":
