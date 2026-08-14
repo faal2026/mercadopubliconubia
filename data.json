@@ -1,9 +1,40 @@
 {
-  "generado": "2026-08-14T07:36:03.753243-04:00",
+  "generado": "2026-08-14T19:11:49.583553-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 2,
+  "total": 4,
   "oportunidades": [
+    {
+      "id": "2785-70-LE26",
+      "nombre": "Servicio de Producción de evento Encuentro de Dirigentes Sociales",
+      "organismo": "I MUNICIPALIDAD DE SAN PEDRO DE LA PAZ - I MUNICIPALIDAD DE SAN PEDRO DE LA PAZ",
+      "publicada": "2026-08-14T19:18:11-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=dy+n/kd+NoFZ6faeLE3png==",
+      "tipo": "LE",
+      "zona": "Gran Concepción",
+      "comuna": "San Pedro de la Paz",
+      "keywords": [
+        "producción de eventos",
+        "producción"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$21.470.060",
+      "fecha_cierre": "2026-08-25T13:00:00-04:00"
+    },
+    {
+      "id": "4239-31-LE26",
+      "nombre": "GIRA PEDAGOGICA A LOS ALTOS DE LIRCAY PARA ALUMNOS DE ESCUELA D-758 RAMIRO ROA FONDOS SEP",
+      "organismo": "I MUNICIPALIDAD DE CURANILAHUE - Dpto. Educación",
+      "publicada": "2026-08-14T14:52:44-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=qAgyZDJojrSW+1gHezAdng==",
+      "tipo": "LE",
+      "zona": "Biobío",
+      "comuna": "Biobío",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "$20.706.000",
+      "fecha_cierre": "2026-08-24T15:01:00-04:00"
+    },
     {
       "id": "2101-101-LE26",
       "nombre": "MENAJE DESTINADO A LA  CENTRAL DE ALIMENTACION",
