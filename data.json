@@ -1,8 +1,8 @@
 {
-  "generado": "2026-08-15T07:10:11.025908-04:00",
+  "generado": "2026-08-15T19:10:38.264549-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 4,
+  "total": 2,
   "oportunidades": [
     {
       "id": "2785-70-LE26",
@@ -34,37 +34,6 @@
       "fuente": "Licitación",
       "monto_label": "$20.706.000",
       "fecha_cierre": "2026-08-24T15:01:00-04:00"
-    },
-    {
-      "id": "2101-101-LE26",
-      "nombre": "MENAJE DESTINADO A LA  CENTRAL DE ALIMENTACION",
-      "organismo": "HOSPITAL INTERCULTURAL KALLVU LLANKA.- - Hospital Cañete",
-      "publicada": "2026-08-10T20:00:39-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=90zn3xac9B1TyjJW5tOyqQ==",
-      "tipo": "LE",
-      "zona": "Biobío",
-      "comuna": "Cañete",
-      "keywords": [
-        "alimentación",
-        "menaje"
-      ],
-      "fuente": "Licitación",
-      "monto_label": "$11.500.000",
-      "fecha_cierre": "2026-08-20T15:10:00-04:00"
-    },
-    {
-      "id": "4079-38-LE26",
-      "nombre": "CONTRATO SUMINISTRO ALIMENTOS PERC NOPERC Y DESC",
-      "organismo": "I MUNICIPALIDAD DE CABRERO - Administración y Finanzas",
-      "publicada": "2026-08-10T19:30:17-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=GVzcq2aLl+br60BSOwYC6A==",
-      "tipo": "LE",
-      "zona": "Biobío",
-      "comuna": "Cabrero",
-      "keywords": [],
-      "fuente": "Licitación",
-      "monto_label": "",
-      "fecha_cierre": "2026-08-20T15:00:00-04:00"
     }
   ]
 }
