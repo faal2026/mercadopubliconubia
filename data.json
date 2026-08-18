@@ -1,9 +1,26 @@
 {
-  "generado": "2026-08-18T07:15:30.818429-04:00",
+  "generado": "2026-08-18T19:12:09.183947-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 4,
+  "total": 5,
   "oportunidades": [
+    {
+      "id": "4377-43-L126",
+      "nombre": "SERVICIO DE ALIMENTACIÓN FIESTAS PATRIAS 2026.-",
+      "organismo": "I MUNICIPALIDAD DE SAN ROSENDO - Ilustre Municipalidad de San Rosendo",
+      "publicada": "2026-08-18T15:17:00-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=p05IaWSuYdMdxBlvWsBqPQ==",
+      "tipo": "",
+      "zona": "Biobío",
+      "comuna": "Biobío",
+      "keywords": [
+        "alimentación",
+        "fiestas patrias"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-08-25T16:10:00-04:00"
+    },
     {
       "id": "4429-83-L126",
       "nombre": "Insumos Programa Mas Adultos Mayores Thno Sur",
