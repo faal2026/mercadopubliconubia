@@ -1,8 +1,8 @@
 {
-  "generado": "2026-08-22T07:11:50.596681-04:00",
+  "generado": "2026-08-22T19:10:44.333653-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 8,
+  "total": 6,
   "oportunidades": [
     {
       "id": "3734-31-LE26",
@@ -98,34 +98,6 @@
       "fuente": "Licitación",
       "monto_label": "",
       "fecha_cierre": "2026-08-25T16:10:00-04:00"
-    },
-    {
-      "id": "4429-83-L126",
-      "nombre": "Insumos Programa Mas Adultos Mayores Thno Sur",
-      "organismo": "MUNICIPALIDAD DE HUALPEN - Dirección de Salud",
-      "publicada": "2026-08-17T18:18:16-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=/qtzPNFL7ZVKOE6/u3GLzg==",
-      "tipo": "",
-      "zona": "Gran Concepción",
-      "comuna": "Hualpén",
-      "keywords": [],
-      "fuente": "Licitación",
-      "monto_label": "$1.421.320",
-      "fecha_cierre": "2026-08-24T15:45:00-04:00"
-    },
-    {
-      "id": "4429-82-L126",
-      "nombre": "Insumos Programa Mas Adultos Mayores La Floresta",
-      "organismo": "MUNICIPALIDAD DE HUALPEN - Dirección de Salud",
-      "publicada": "2026-08-17T18:07:35-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=9qdaadtRtcqtvA6I2bP34Q==",
-      "tipo": "",
-      "zona": "Gran Concepción",
-      "comuna": "Hualpén",
-      "keywords": [],
-      "fuente": "Licitación",
-      "monto_label": "$1.231.000",
-      "fecha_cierre": "2026-08-24T15:31:00-04:00"
     }
   ]
 }
