@@ -1,8 +1,8 @@
 {
-  "generado": "2026-08-23T07:11:35.989763-04:00",
+  "generado": "2026-08-23T19:10:52.232942-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 6,
+  "total": 5,
   "oportunidades": [
     {
       "id": "3734-31-LE26",
@@ -81,23 +81,6 @@
       "fuente": "Licitación",
       "monto_label": "",
       "fecha_cierre": "2026-09-01T10:00:00-04:00"
-    },
-    {
-      "id": "4377-43-L126",
-      "nombre": "SERVICIO DE ALIMENTACIÓN FIESTAS PATRIAS 2026.-",
-      "organismo": "I MUNICIPALIDAD DE SAN ROSENDO - Ilustre Municipalidad de San Rosendo",
-      "publicada": "2026-08-18T15:17:00-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=p05IaWSuYdMdxBlvWsBqPQ==",
-      "tipo": "",
-      "zona": "Biobío",
-      "comuna": "Biobío",
-      "keywords": [
-        "alimentación",
-        "fiestas patrias"
-      ],
-      "fuente": "Licitación",
-      "monto_label": "",
-      "fecha_cierre": "2026-08-25T16:10:00-04:00"
     }
   ]
 }
