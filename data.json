@@ -1,9 +1,23 @@
 {
-  "generado": "2026-08-24T07:17:41.003512-04:00",
+  "generado": "2026-08-24T19:14:12.381071-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 5,
+  "total": 6,
   "oportunidades": [
+    {
+      "id": "2358-22-LE26",
+      "nombre": "Suministro de Raciones de Alimentos ©sc 129 dideco",
+      "organismo": "I MUNICIPALIDAD DE TALCAHUANO - DEPARTAMENTO DE FINANZAS",
+      "publicada": "2026-08-24T16:52:33-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=hp9UPQ7axyaSEmeI1lxypA==",
+      "tipo": "LE",
+      "zona": "Gran Concepción",
+      "comuna": "Talcahuano",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "$60.685.995",
+      "fecha_cierre": "2026-09-03T15:05:00-04:00"
+    },
     {
       "id": "3734-31-LE26",
       "nombre": "CONTRATAR SERVICIO ARRIENDO DE CARPA",
