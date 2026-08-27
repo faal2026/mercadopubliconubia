@@ -1,9 +1,41 @@
 {
-  "generado": "2026-08-26T07:19:39.363132-04:00",
+  "generado": "2026-08-27T00:08:23.151288-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 9,
+  "total": 6,
   "oportunidades": [
+    {
+      "id": "4377-47-LE26",
+      "nombre": "SERVICIOS ALIMENTACIÓN PROGRAMA PERSONAS MAYORES.-",
+      "organismo": "I MUNICIPALIDAD DE SAN ROSENDO - Ilustre Municipalidad de San Rosendo",
+      "publicada": "2026-08-26T19:30:49-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=iV5F10RtEOcgz59F//qg7Q==",
+      "tipo": "LE",
+      "zona": "Biobío",
+      "comuna": "Biobío",
+      "keywords": [
+        "alimentación"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-09-08T15:03:00-04:00"
+    },
+    {
+      "id": "2771-40-LE26",
+      "nombre": "CONVENIO DE SUMINISTRO DE ALIMENTOS BEBESTIBLES E INSUMOS INTEGRALES PARA LA MUNICIPALIDAD DE CHIGUAYANTE",
+      "organismo": "I MUNICIPALIDAD DE CHIGUAYANTE - MUNICIPALIDAD DE CHIGUAYANTE",
+      "publicada": "2026-08-26T16:24:11-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=TNDy/o4CU/QCeV/V4HEhIg==",
+      "tipo": "LE",
+      "zona": "Gran Concepción",
+      "comuna": "Chiguayante",
+      "keywords": [
+        "suministro de alimentos"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$25.000.000",
+      "fecha_cierre": "2026-09-07T15:01:00-04:00"
+    },
     {
       "id": "4358-24-L126",
       "nombre": "“SERVICIO DE SUMINISTRO, ELABORACIÓN Y ENTREGA DE COLACIONES PARA ACTIVIDADES EDUCATIVAS 2026”",
@@ -65,84 +97,6 @@
       "fuente": "Licitación",
       "monto_label": "$60.685.995",
       "fecha_cierre": "2026-09-03T15:05:00-04:00"
-    },
-    {
-      "id": "3734-31-LE26",
-      "nombre": "CONTRATAR SERVICIO ARRIENDO DE CARPA",
-      "organismo": "I MUNICIPALIDAD DE LAJA - Adquisiciones",
-      "publicada": "2026-08-21T21:14:23-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=GrtmS/cLZKfbXsGiVUHwbQ==",
-      "tipo": "LE",
-      "zona": "Biobío",
-      "comuna": "Biobío",
-      "keywords": [
-        "fiestas patrias"
-      ],
-      "fuente": "Licitación",
-      "monto_label": "$32.000.000",
-      "fecha_cierre": "2026-08-28T15:05:00-04:00"
-    },
-    {
-      "id": "483-42-LE26",
-      "nombre": "SUMINISTRO DE ALIMENTOS PERECIBLES Y NO PERECIBLES",
-      "organismo": "SERVICIO DE SALUD CONCEPCION ARAUCO HOSPITAL DE CONTULMO - H Contulmo",
-      "publicada": "2026-08-21T19:26:15-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=FVFpYIT2YkmSBEiEYke1Ng==",
-      "tipo": "LE",
-      "zona": "Gran Concepción",
-      "comuna": "Concepción",
-      "keywords": [
-        "alimentación",
-        "suministro de alimentos"
-      ],
-      "fuente": "Licitación",
-      "monto_label": "",
-      "fecha_cierre": "2026-09-01T15:30:00-04:00"
-    },
-    {
-      "id": "1057417-205-LE26",
-      "nombre": "SERVICIOS DE COFFE BREAK Y ALIMENTACIÓN",
-      "organismo": "COMPLEJO ASISTENCIAL DR.VICTOR RIOS RUIZ - Bienes y Servicios",
-      "publicada": "2026-08-21T18:33:49-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=KmczG4jEoHPwKxubDfI5Pw==",
-      "tipo": "LE",
-      "zona": "Biobío",
-      "comuna": "Biobío",
-      "keywords": [
-        "coffee break",
-        "alimentación"
-      ],
-      "fuente": "Licitación",
-      "monto_label": "",
-      "fecha_cierre": "2026-08-27T17:00:00-04:00"
-    },
-    {
-      "id": "4429-84-L126",
-      "nombre": "Insumos Programa Mas Adultos Mayores Hualpencillo",
-      "organismo": "MUNICIPALIDAD DE HUALPEN - Dirección de Salud",
-      "publicada": "2026-08-21T14:04:54-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=9CT7hupBCs5eoyYgIaIefA==",
-      "tipo": "",
-      "zona": "Gran Concepción",
-      "comuna": "Hualpén",
-      "keywords": [],
-      "fuente": "Licitación",
-      "monto_label": "",
-      "fecha_cierre": "2026-08-31T18:21:00-04:00"
-    },
-    {
-      "id": "4414-61-LE26",
-      "nombre": "1.500 CANASTAS DE ALIMENTOS PARA STOCK BODEGA ASISTENCIALIDAD - DIDECO",
-      "organismo": "I MUNICIPALIDAD DE ARAUCO - Finanzas Municipalidad de Arauco",
-      "publicada": "2026-08-21T11:49:44-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=y4fzsIyvV/Ziwt+yiOPMug==",
-      "tipo": "LE",
-      "zona": "Biobío",
-      "comuna": "Arauco",
-      "keywords": [],
-      "fuente": "Licitación",
-      "monto_label": "",
-      "fecha_cierre": "2026-09-01T10:00:00-04:00"
     }
   ]
 }
