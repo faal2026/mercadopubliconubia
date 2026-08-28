@@ -1,9 +1,26 @@
 {
-  "generado": "2026-08-27T16:51:10.790895-04:00",
+  "generado": "2026-08-28T02:25:32.779302-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 6,
+  "total": 7,
   "oportunidades": [
+    {
+      "id": "2358-21-LE26",
+      "nombre": "©sc Prot. Social-Suministro de alimentos",
+      "organismo": "I MUNICIPALIDAD DE TALCAHUANO - DEPARTAMENTO DE FINANZAS",
+      "publicada": "2026-08-27T22:49:22-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=Xwz0ktJv3K2goNSK5f6C+Q==",
+      "tipo": "LE",
+      "zona": "Gran Concepción",
+      "comuna": "Talcahuano",
+      "keywords": [
+        "alimentación",
+        "suministro de alimentos"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$32.311.096",
+      "fecha_cierre": "2026-09-02T15:05:00-04:00"
+    },
     {
       "id": "4377-47-LE26",
       "nombre": "SERVICIOS ALIMENTACIÓN PROGRAMA PERSONAS MAYORES.-",
