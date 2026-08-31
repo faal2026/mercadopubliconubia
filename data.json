@@ -1,9 +1,42 @@
 {
-  "generado": "2026-08-30T20:58:52.180086-04:00",
+  "generado": "2026-08-31T13:45:38.321350-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 5,
+  "total": 6,
   "oportunidades": [
+    {
+      "id": "4377-49-L126",
+      "nombre": "SERVICIO DE ALIMENTACIÓN FIESTAS PATRIAS 2026.-",
+      "organismo": "I MUNICIPALIDAD DE SAN ROSENDO - Ilustre Municipalidad de San Rosendo",
+      "publicada": "2026-08-31T14:55:35-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=vIZ68HOmb5J1XzYH0N3TGw==",
+      "tipo": "",
+      "zona": "Biobío",
+      "comuna": "Biobío",
+      "keywords": [
+        "alimentación",
+        "fiestas patrias"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-09-07T15:38:00-04:00"
+    },
+    {
+      "id": "2704-65-LE26",
+      "nombre": "SERVICIOS DE COFFEE BREAK  SC 128",
+      "organismo": "UNIVERSIDAD DEL BIO BIO - Universidad del Bío-Bío - Campus Concepción",
+      "publicada": "2026-08-31T14:21:48-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=Mylaam5BZwpXJXbfDAnlOA==",
+      "tipo": "LE",
+      "zona": "Gran Concepción",
+      "comuna": "Concepción",
+      "keywords": [
+        "coffee break"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-09-10T18:00:00-04:00"
+    },
     {
       "id": "4414-64-LE26",
       "nombre": "SERVICIO DE ARRIENDO INSTALACIÓN Y DESARME CARPAS Y STAND FIESTA DE LA CHILENIDAD.",
@@ -66,22 +99,6 @@
       "fuente": "Licitación",
       "monto_label": "",
       "fecha_cierre": "2026-09-08T15:03:00-04:00"
-    },
-    {
-      "id": "2771-40-LE26",
-      "nombre": "CONVENIO DE SUMINISTRO DE ALIMENTOS BEBESTIBLES E INSUMOS INTEGRALES PARA LA MUNICIPALIDAD DE CHIGUAYANTE",
-      "organismo": "I MUNICIPALIDAD DE CHIGUAYANTE - MUNICIPALIDAD DE CHIGUAYANTE",
-      "publicada": "2026-08-26T16:24:11-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=TNDy/o4CU/QCeV/V4HEhIg==",
-      "tipo": "LE",
-      "zona": "Gran Concepción",
-      "comuna": "Chiguayante",
-      "keywords": [
-        "suministro de alimentos"
-      ],
-      "fuente": "Licitación",
-      "monto_label": "$25.000.000",
-      "fecha_cierre": "2026-09-07T15:01:00-04:00"
     }
   ]
 }
