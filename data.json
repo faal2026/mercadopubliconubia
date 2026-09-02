@@ -1,8 +1,8 @@
 {
-  "generado": "2026-09-01T11:17:50.542877-04:00",
+  "generado": "2026-09-01T20:39:22.597123-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 5,
+  "total": 4,
   "oportunidades": [
     {
       "id": "4377-49-L126",
@@ -66,23 +66,6 @@
       "fuente": "Licitación",
       "monto_label": "$1.700.000",
       "fecha_cierre": "2026-09-08T16:30:00-04:00"
-    },
-    {
-      "id": "2358-21-LE26",
-      "nombre": "©sc Prot. Social-Suministro de alimentos",
-      "organismo": "I MUNICIPALIDAD DE TALCAHUANO - DEPARTAMENTO DE FINANZAS",
-      "publicada": "2026-08-27T22:49:00-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=Xwz0ktJv3K2goNSK5f6C+Q==",
-      "tipo": "LE",
-      "zona": "Gran Concepción",
-      "comuna": "Talcahuano",
-      "keywords": [
-        "alimentación",
-        "suministro de alimentos"
-      ],
-      "fuente": "Licitación",
-      "monto_label": "$32.311.096",
-      "fecha_cierre": "2026-09-04T09:00:00-04:00"
     }
   ]
 }
