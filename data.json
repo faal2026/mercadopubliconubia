@@ -1,8 +1,8 @@
 {
-  "generado": "2026-09-02T10:48:00.141164-04:00",
+  "generado": "2026-09-02T20:49:41.661261-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 3,
+  "total": 2,
   "oportunidades": [
     {
       "id": "4377-49-L126",
@@ -36,22 +36,6 @@
       "fuente": "Licitación",
       "monto_label": "",
       "fecha_cierre": "2026-09-10T18:00:00-04:00"
-    },
-    {
-      "id": "4414-64-LE26",
-      "nombre": "SERVICIO DE ARRIENDO INSTALACIÓN Y DESARME CARPAS Y STAND FIESTA DE LA CHILENIDAD.",
-      "organismo": "I MUNICIPALIDAD DE ARAUCO - Finanzas Municipalidad de Arauco",
-      "publicada": "2026-08-28T14:32:32-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=Qa05e2zqHvfRGJg4g9Ajhw==",
-      "tipo": "LE",
-      "zona": "Biobío",
-      "comuna": "Arauco",
-      "keywords": [
-        "chilenidad"
-      ],
-      "fuente": "Licitación",
-      "monto_label": "$13.512.450",
-      "fecha_cierre": "2026-09-07T15:00:00-04:00"
     }
   ]
 }
