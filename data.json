@@ -1,9 +1,25 @@
 {
-  "generado": "2026-09-03T10:47:28.578705-04:00",
+  "generado": "2026-09-03T20:31:01.458801-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 2,
+  "total": 3,
   "oportunidades": [
+    {
+      "id": "652-45-LE26",
+      "nombre": "PRODUCCIÓN DE JORNADA CON SERVICIO DE ALIMENTACIÓN",
+      "organismo": "SERVICIO DE SALUD ARAUCO - SERVICIO DE SALUD ARAUCO",
+      "publicada": "2026-09-03T18:30:19-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=ktBrwQAZKrC1ItFEtoqy9A==",
+      "tipo": "LE",
+      "zona": "Biobío",
+      "comuna": "Arauco",
+      "keywords": [
+        "alimentación"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-09-14T19:56:00-04:00"
+    },
     {
       "id": "4377-49-L126",
       "nombre": "SERVICIO DE ALIMENTACIÓN FIESTAS PATRIAS 2026.-",
