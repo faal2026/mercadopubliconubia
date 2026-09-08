@@ -1,9 +1,25 @@
 {
-  "generado": "2026-09-07T12:11:02.791948-04:00",
+  "generado": "2026-09-07T20:47:24.003037-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 2,
+  "total": 3,
   "oportunidades": [
+    {
+      "id": "4055-66-L126",
+      "nombre": "SERVICIO DE ALIMENTACIÓN PRODESAL",
+      "organismo": "I MUNICIPALIDAD DE YUMBEL - Municipalidad de Yumbel",
+      "publicada": "2026-09-07T16:55:18-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=An0QzXUlmNmBQqVzWa7uGg==",
+      "tipo": "",
+      "zona": "Biobío",
+      "comuna": "Biobío",
+      "keywords": [
+        "alimentación"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$4.168.670",
+      "fecha_cierre": "2026-09-14T15:01:00-04:00"
+    },
     {
       "id": "2704-71-LE26",
       "nombre": "SERVICIO DE ALIMENTACIÓN Y AMPLIFICACIÓN - SC 5342",
