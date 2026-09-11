@@ -1,9 +1,26 @@
 {
-  "generado": "2026-09-10T10:41:40.766927-04:00",
+  "generado": "2026-09-10T20:39:12.603824-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 2,
+  "total": 3,
   "oportunidades": [
+    {
+      "id": "1057417-199-LR26",
+      "nombre": "CONCESIÓN DE CASINO DE ALIMENTACIÓN PARA FUNCIONARIOS DEL COMPLEJO ASISTENCIAL DR. VÍCTOR RÍOS RUIZ LOS ÁNGELES POR 5 MESES.",
+      "organismo": "COMPLEJO ASISTENCIAL DR.VICTOR RIOS RUIZ - Bienes y Servicios",
+      "publicada": "2026-09-10T19:41:04-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=lmtfs5bCzIykLKGbL0AJpA==",
+      "tipo": "LR",
+      "zona": "Biobío",
+      "comuna": "Biobío",
+      "keywords": [
+        "alimentación",
+        "casino"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$475.970.732",
+      "fecha_cierre": "2026-10-13T17:00:00-04:00"
+    },
     {
       "id": "1057544-308-LE26",
       "nombre": "Compra de colaciones para dispositivos externos de salud mental dependientes del Hospital Las Higueras de Talcahuano",
