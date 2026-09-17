@@ -1,9 +1,26 @@
 {
-  "generado": "2026-09-16T11:12:41.958130-04:00",
+  "generado": "2026-09-16T20:57:15.775505-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 1,
+  "total": 2,
   "oportunidades": [
+    {
+      "id": "2785-86-LE26",
+      "nombre": "SDA 6443 Servicio de Producción de evento Encuentro de Dirigentes Sociales",
+      "organismo": "I MUNICIPALIDAD DE SAN PEDRO DE LA PAZ - I MUNICIPALIDAD DE SAN PEDRO DE LA PAZ",
+      "publicada": "2026-09-16T21:14:52-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=dkGO7ONmTWHJpOsp4kbR3w==",
+      "tipo": "LE",
+      "zona": "Gran Concepción",
+      "comuna": "San Pedro de la Paz",
+      "keywords": [
+        "producción de eventos",
+        "producción"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$21.470.060",
+      "fecha_cierre": "2026-09-30T18:20:00-04:00"
+    },
     {
       "id": "3428-17-LE26",
       "nombre": "Servicio de cafetería y de alimentación",
