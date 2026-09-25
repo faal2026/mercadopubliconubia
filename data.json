@@ -1,7 +1,22 @@
 {
-  "generado": "2026-09-24T21:00:24.141001-04:00",
+  "generado": "2026-09-25T11:38:44.888422-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 0,
-  "oportunidades": []
+  "total": 1,
+  "oportunidades": [
+    {
+      "id": "4189-45-LE26",
+      "nombre": "Contrato de Suministro de Canastas de Alimentos",
+      "organismo": "I MUNICIPALIDAD DE LEBU - Administración y Finanzas",
+      "publicada": "2026-09-25T12:29:22-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=RmLsoCE/PzqnuKMAGvoO0Q==",
+      "tipo": "LE",
+      "zona": "Biobío",
+      "comuna": "Biobío",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "$12.000.000",
+      "fecha_cierre": "2026-09-30T13:00:00-04:00"
+    }
+  ]
 }
