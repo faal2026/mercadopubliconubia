@@ -1,9 +1,25 @@
 {
-  "generado": "2026-09-28T22:22:58.325943-04:00",
+  "generado": "2026-09-29T12:41:09.973848-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 1,
+  "total": 2,
   "oportunidades": [
+    {
+      "id": "1057432-89-LE26",
+      "nombre": "contrato de suministro COFFE BREAK",
+      "organismo": "SERVICIO DE SALUD CONCEPCION - Servicio de Salud Concepción",
+      "publicada": "2026-09-29T12:28:02-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=B+4z9fJIaL6ThijPpYgEMQ==",
+      "tipo": "LE",
+      "zona": "Gran Concepción",
+      "comuna": "Concepción",
+      "keywords": [
+        "coffee break"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$24.500.000",
+      "fecha_cierre": "2026-10-05T15:01:00-04:00"
+    },
     {
       "id": "4189-45-LE26",
       "nombre": "Contrato de Suministro de Canastas de Alimentos",
