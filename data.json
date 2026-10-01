@@ -1,9 +1,23 @@
 {
-  "generado": "2026-09-30T21:40:00.862138-04:00",
+  "generado": "2026-10-01T13:10:43.016646-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 1,
+  "total": 2,
   "oportunidades": [
+    {
+      "id": "4055-81-L126",
+      "nombre": "ADQUISICION DE INSUMOS PARA CAPACITACIONES Y REUNI",
+      "organismo": "I MUNICIPALIDAD DE YUMBEL - Municipalidad de Yumbel",
+      "publicada": "2026-10-01T12:28:21-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=dfEezyvKndtTHDsT4K2TYA==",
+      "tipo": "",
+      "zona": "Biobío",
+      "comuna": "Biobío",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "$2.000.000",
+      "fecha_cierre": "2026-10-14T12:00:00-04:00"
+    },
     {
       "id": "1057432-89-LE26",
       "nombre": "contrato de suministro COFFE BREAK",
