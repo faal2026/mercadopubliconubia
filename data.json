@@ -1,25 +1,7 @@
 {
-  "generado": "2026-10-07T22:21:29.590258-04:00",
+  "generado": "2026-10-08T13:38:32.982445-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 1,
-  "oportunidades": [
-    {
-      "id": "4074-32-LE26",
-      "nombre": "ALIMENTACIÓN Y COLACION SALIDAS PEDAGOGICAS UE DEM",
-      "organismo": "I MUNICIPALIDAD DE YUMBEL - Depto. Educacion",
-      "publicada": "2026-10-03T14:07:05-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=z/ywPPcAjBpPpBGlIMK4Rw==",
-      "tipo": "LE",
-      "zona": "Biobío",
-      "comuna": "Biobío",
-      "keywords": [
-        "alimentación",
-        "colación"
-      ],
-      "fuente": "Licitación",
-      "monto_label": "$20.000.000",
-      "fecha_cierre": "2026-10-13T15:01:00-04:00"
-    }
-  ]
+  "total": 0,
+  "oportunidades": []
 }
