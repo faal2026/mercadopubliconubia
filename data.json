@@ -1,7 +1,55 @@
 {
-  "generado": "2026-10-15T11:23:48.529757-04:00",
+  "generado": "2026-10-15T20:53:17.989766-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 0,
-  "oportunidades": []
+  "total": 3,
+  "oportunidades": [
+    {
+      "id": "2771-64-LE26",
+      "nombre": "ADQUISICION DE JUGUETES NAVIDAD EN CHIGUAYANTE 2026",
+      "organismo": "I MUNICIPALIDAD DE CHIGUAYANTE - MUNICIPALIDAD DE CHIGUAYANTE",
+      "publicada": "2026-10-15T20:08:30-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=mL+L5rsvEGPFy3oUgn/3Zg==",
+      "tipo": "LE",
+      "zona": "Gran Concepción",
+      "comuna": "Chiguayante",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "$28.000.000",
+      "fecha_cierre": "2026-10-26T15:30:00-04:00"
+    },
+    {
+      "id": "4055-88-L126",
+      "nombre": "SERVICIO DE BANQUETERIA DIA DEL FUNCIONARIO 2026",
+      "organismo": "I MUNICIPALIDAD DE YUMBEL - Municipalidad de Yumbel",
+      "publicada": "2026-10-15T19:10:35-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=icN4cgAXIsPE4XbMAfHFEg==",
+      "tipo": "",
+      "zona": "Biobío",
+      "comuna": "Biobío",
+      "keywords": [
+        "banquetería"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$7.000.000",
+      "fecha_cierre": "2026-10-22T16:00:00-04:00"
+    },
+    {
+      "id": "2785-94-LE26",
+      "nombre": "Servicio de producción de evento ceremonia de reconocimiento día del funcionario municipal",
+      "organismo": "I MUNICIPALIDAD DE SAN PEDRO DE LA PAZ - I MUNICIPALIDAD DE SAN PEDRO DE LA PAZ",
+      "publicada": "2026-10-15T15:29:52-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=3fpuEPGUYzXg2O8jL+lm/w==",
+      "tipo": "LE",
+      "zona": "Gran Concepción",
+      "comuna": "San Pedro de la Paz",
+      "keywords": [
+        "producción de eventos",
+        "producción"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$10.000.000",
+      "fecha_cierre": "2026-10-27T14:00:00-04:00"
+    }
+  ]
 }
