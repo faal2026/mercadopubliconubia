@@ -1,9 +1,23 @@
 {
-  "generado": "2026-10-16T11:03:54.045409-04:00",
+  "generado": "2026-10-16T20:53:56.410904-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 3,
+  "total": 4,
   "oportunidades": [
+    {
+      "id": "4362-30-LE26",
+      "nombre": "Servicio de Capacitación Papa Frita Ancestral 2026",
+      "organismo": "I MUNICIPALIDAD DE NACIMIENTO - Secplan",
+      "publicada": "2026-10-16T16:55:00-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=PKs2g13VzFqGnA1g5kd4IA==",
+      "tipo": "LE",
+      "zona": "Biobío",
+      "comuna": "Biobío",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-10-26T15:00:00-04:00"
+    },
     {
       "id": "2771-64-LE26",
       "nombre": "ADQUISICION DE JUGUETES NAVIDAD EN CHIGUAYANTE 2026",
