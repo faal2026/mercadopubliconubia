@@ -1,9 +1,25 @@
 {
-  "generado": "2026-10-18T20:35:10.346042-04:00",
+  "generado": "2026-10-19T13:14:29.835369-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 4,
+  "total": 5,
   "oportunidades": [
+    {
+      "id": "2408-251-L126",
+      "nombre": "SUMINISTRO SERVICIO DE ALIMENTACIÓN PARA OFICINA LOCAL DE LA NIÑEZ Y CRECER EN COMUNIDAD 2026",
+      "organismo": "I MUNICIPALIDAD DE LOS ANGELES - IMUNI_LOSANGELES ADQUISICIONES",
+      "publicada": "2026-10-19T12:12:04-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=yJOmEccLo03IgYjJc9zC8w==",
+      "tipo": "",
+      "zona": "Biobío",
+      "comuna": "Los Ángeles",
+      "keywords": [
+        "alimentación"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$6.516.814",
+      "fecha_cierre": "2026-10-26T15:00:00-04:00"
+    },
     {
       "id": "4362-30-LE26",
       "nombre": "Servicio de Capacitación Papa Frita Ancestral 2026",
