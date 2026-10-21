@@ -1,9 +1,57 @@
 {
-  "generado": "2026-10-20T11:26:45.331957-04:00",
+  "generado": "2026-10-20T21:06:28.782374-04:00",
   "orgcode": "891391",
   "fuente_api": true,
   "total": 5,
   "oportunidades": [
+    {
+      "id": "4074-34-LE26",
+      "nombre": "ADQ ALIMENTOS Y COLACION PARA ALUMNOS DEM YUMBEL",
+      "organismo": "I MUNICIPALIDAD DE YUMBEL - Depto. Educacion",
+      "publicada": "2026-10-20T20:57:03-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=fa8LD1v+RCsH3MzDJc0ioQ==",
+      "tipo": "LE",
+      "zona": "Biobío",
+      "comuna": "Biobío",
+      "keywords": [
+        "alimentación",
+        "colación"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$20.000.000",
+      "fecha_cierre": "2026-10-26T15:00:00-04:00"
+    },
+    {
+      "id": "483-51-LE26",
+      "nombre": "SUMINISTRO DE ALIMENTOS PERECIBLES Y NO PERECIBLES PARA EL SERVICIO DE ALIMENTACION",
+      "organismo": "SERVICIO DE SALUD CONCEPCION ARAUCO HOSPITAL DE CONTULMO - H Contulmo",
+      "publicada": "2026-10-20T20:27:13-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=nBDltrIKcmKYYh3jTmVGaA==",
+      "tipo": "LE",
+      "zona": "Gran Concepción",
+      "comuna": "Concepción",
+      "keywords": [
+        "alimentación",
+        "suministro de alimentos"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-10-30T17:30:00-04:00"
+    },
+    {
+      "id": "2416-28-LP26",
+      "nombre": "SUMINISTRO DE CAJAS DE ALIMENTOS",
+      "organismo": "I MUNICIPALIDAD DE CONCEPCION - DIDECO MUNICIPALIDAD DE CONCEPCION",
+      "publicada": "2026-10-20T19:32:46-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=izm6FMDEe0QG/j0nAyJ5kQ==",
+      "tipo": "LP",
+      "zona": "Gran Concepción",
+      "comuna": "Concepción",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-10-30T16:41:00-04:00"
+    },
     {
       "id": "2408-251-L126",
       "nombre": "SUMINISTRO SERVICIO DE ALIMENTACIÓN PARA OFICINA LOCAL DE LA NIÑEZ Y CRECER EN COMUNIDAD 2026",
@@ -33,53 +81,6 @@
       "fuente": "Licitación",
       "monto_label": "",
       "fecha_cierre": "2026-10-26T15:00:00-04:00"
-    },
-    {
-      "id": "2771-64-LE26",
-      "nombre": "ADQUISICION DE JUGUETES NAVIDAD EN CHIGUAYANTE 2026",
-      "organismo": "I MUNICIPALIDAD DE CHIGUAYANTE - MUNICIPALIDAD DE CHIGUAYANTE",
-      "publicada": "2026-10-15T20:08:30-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=mL+L5rsvEGPFy3oUgn/3Zg==",
-      "tipo": "LE",
-      "zona": "Gran Concepción",
-      "comuna": "Chiguayante",
-      "keywords": [],
-      "fuente": "Licitación",
-      "monto_label": "$28.000.000",
-      "fecha_cierre": "2026-10-26T15:30:00-04:00"
-    },
-    {
-      "id": "4055-88-L126",
-      "nombre": "SERVICIO DE BANQUETERIA DIA DEL FUNCIONARIO 2026",
-      "organismo": "I MUNICIPALIDAD DE YUMBEL - Municipalidad de Yumbel",
-      "publicada": "2026-10-15T19:10:35-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=icN4cgAXIsPE4XbMAfHFEg==",
-      "tipo": "",
-      "zona": "Biobío",
-      "comuna": "Biobío",
-      "keywords": [
-        "banquetería"
-      ],
-      "fuente": "Licitación",
-      "monto_label": "$7.000.000",
-      "fecha_cierre": "2026-10-22T16:00:00-04:00"
-    },
-    {
-      "id": "2785-94-LE26",
-      "nombre": "Servicio de producción de evento ceremonia de reconocimiento día del funcionario municipal",
-      "organismo": "I MUNICIPALIDAD DE SAN PEDRO DE LA PAZ - I MUNICIPALIDAD DE SAN PEDRO DE LA PAZ",
-      "publicada": "2026-10-15T15:29:52-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=3fpuEPGUYzXg2O8jL+lm/w==",
-      "tipo": "LE",
-      "zona": "Gran Concepción",
-      "comuna": "San Pedro de la Paz",
-      "keywords": [
-        "producción de eventos",
-        "producción"
-      ],
-      "fuente": "Licitación",
-      "monto_label": "$10.000.000",
-      "fecha_cierre": "2026-10-27T14:00:00-04:00"
     }
   ]
 }
