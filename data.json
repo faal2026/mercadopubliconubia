@@ -1,9 +1,40 @@
 {
-  "generado": "2026-10-22T11:43:10.257026-04:00",
+  "generado": "2026-10-22T21:04:37.809823-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 6,
+  "total": 8,
   "oportunidades": [
+    {
+      "id": "2771-72-LE26",
+      "nombre": "SERVICIO DE PRODUCCIÓN DE EVENTOS NAVIDAD EN CHIGUAYANTE 2026",
+      "organismo": "I MUNICIPALIDAD DE CHIGUAYANTE - MUNICIPALIDAD DE CHIGUAYANTE",
+      "publicada": "2026-10-22T21:11:40-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=fNM8d5gXz8GwDd0J+Y9qxg==",
+      "tipo": "LE",
+      "zona": "Gran Concepción",
+      "comuna": "Chiguayante",
+      "keywords": [
+        "producción de eventos",
+        "producción"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$35.000.000",
+      "fecha_cierre": "2026-11-02T17:00:00-04:00"
+    },
+    {
+      "id": "2771-68-LE26",
+      "nombre": "SERVICIOS DE ARRIENDO DE CARPAS: “ARRIENDO CARPA Y CAMARÍN - NAVIDAD EN CHIGUAYANTE 2026” Y “ARRIENDO DE CARPAS Y STAND DE COCINERÍAS ESTRUCTURAS DE SOMBRA Y CAMARÍN - FIESTA DE LA PRIMAVERA CHIGUAYANTE 2026 - FONDOS FET",
+      "organismo": "I MUNICIPALIDAD DE CHIGUAYANTE - MUNICIPALIDAD DE CHIGUAYANTE",
+      "publicada": "2026-10-22T20:24:56-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=gtWZyTYXP8jYv120n6tjAg==",
+      "tipo": "LE",
+      "zona": "Gran Concepción",
+      "comuna": "Chiguayante",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "$36.000.000",
+      "fecha_cierre": "2026-11-02T15:30:00-04:00"
+    },
     {
       "id": "1316747-27-L126",
       "nombre": "Servicio de Alimentación Tablas de coctel CCMLA",
