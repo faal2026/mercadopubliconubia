@@ -1,9 +1,23 @@
 {
-  "generado": "2026-10-22T21:04:37.809823-04:00",
+  "generado": "2026-10-23T11:32:10.348569-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 8,
+  "total": 9,
   "oportunidades": [
+    {
+      "id": "2771-73-LE26",
+      "nombre": "ADQUISICIÓN DE BOLSAS DE CONFITES NAVIDAD EN CHIGUAYANTE 2026",
+      "organismo": "I MUNICIPALIDAD DE CHIGUAYANTE - MUNICIPALIDAD DE CHIGUAYANTE",
+      "publicada": "2026-10-23T12:50:26-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=T+S0ltyFNV10p7ZpVO2jnw==",
+      "tipo": "LE",
+      "zona": "Gran Concepción",
+      "comuna": "Chiguayante",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-11-03T15:15:00-04:00"
+    },
     {
       "id": "2771-72-LE26",
       "nombre": "SERVICIO DE PRODUCCIÓN DE EVENTOS NAVIDAD EN CHIGUAYANTE 2026",
