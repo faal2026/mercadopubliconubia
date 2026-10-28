@@ -1,36 +1,22 @@
 {
-  "generado": "2026-10-27T21:54:20.140716-04:00",
+  "generado": "2026-10-28T12:52:14.801161-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 2,
+  "total": 1,
   "oportunidades": [
     {
-      "id": "2360-92-LE26",
-      "nombre": "SERVICIO DE ARRIENDO DE LOCAL Y CENA BIENESTAR DAS",
-      "organismo": "I MUNICIPALIDAD DE TALCAHUANO - DISAM",
-      "publicada": "2026-10-23T15:40:42-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=I2+H88vgoIz246F/pJQIKw==",
-      "tipo": "LE",
-      "zona": "Gran Concepción",
-      "comuna": "Talcahuano",
-      "keywords": [],
-      "fuente": "Licitación",
-      "monto_label": "$21.195.000",
-      "fecha_cierre": "2026-11-03T10:00:00-04:00"
-    },
-    {
-      "id": "2771-73-LE26",
-      "nombre": "ADQUISICIÓN DE BOLSAS DE CONFITES NAVIDAD EN CHIGUAYANTE 2026",
+      "id": "2771-71-LE26",
+      "nombre": "ADQUISICIÓN DE PRODUCTOS FARMACÉUTICO VETERINARIOS PARA LA MUNICIPALIDAD DE CHIGUAYANTE",
       "organismo": "I MUNICIPALIDAD DE CHIGUAYANTE - MUNICIPALIDAD DE CHIGUAYANTE",
-      "publicada": "2026-10-23T12:50:26-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=T+S0ltyFNV10p7ZpVO2jnw==",
+      "publicada": "2026-10-28T14:46:23-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=cH0ED0AUd+oGaTlQaVhGCg==",
       "tipo": "LE",
       "zona": "Gran Concepción",
       "comuna": "Chiguayante",
       "keywords": [],
       "fuente": "Licitación",
-      "monto_label": "",
-      "fecha_cierre": "2026-11-03T15:15:00-04:00"
+      "monto_label": "$13.340.000",
+      "fecha_cierre": "2026-11-09T15:30:00-04:00"
     }
   ]
 }
