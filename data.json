@@ -1,9 +1,26 @@
 {
-  "generado": "2026-10-29T22:15:47.702833-04:00",
+  "generado": "2026-10-30T12:51:07.289736-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 1,
+  "total": 2,
   "oportunidades": [
+    {
+      "id": "2408-275-L126",
+      "nombre": "SUMINISTRO DE ALIMENTACIÓN PARA EL PROGRAMA LAZOS 2026.",
+      "organismo": "I MUNICIPALIDAD DE LOS ANGELES - IMUNI_LOSANGELES ADQUISICIONES",
+      "publicada": "2026-10-30T15:34:36-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=odyf4MTK9vThDSq1i/Go/Q==",
+      "tipo": "",
+      "zona": "Biobío",
+      "comuna": "Los Ángeles",
+      "keywords": [
+        "alimentación",
+        "suministro de alimentos"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$3.120.000",
+      "fecha_cierre": "2026-11-06T15:00:00-04:00"
+    },
     {
       "id": "2771-71-LE26",
       "nombre": "ADQUISICIÓN DE PRODUCTOS FARMACÉUTICO VETERINARIOS PARA LA MUNICIPALIDAD DE CHIGUAYANTE",
