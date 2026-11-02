@@ -1,8 +1,8 @@
 {
-  "generado": "2026-11-01T21:57:54.707225-04:00",
+  "generado": "2026-11-02T16:34:07.113751-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 2,
+  "total": 1,
   "oportunidades": [
     {
       "id": "2408-275-L126",
@@ -20,20 +20,6 @@
       "fuente": "Licitación",
       "monto_label": "$3.120.000",
       "fecha_cierre": "2026-11-06T15:00:00-04:00"
-    },
-    {
-      "id": "2771-71-LE26",
-      "nombre": "ADQUISICIÓN DE PRODUCTOS FARMACÉUTICO VETERINARIOS PARA LA MUNICIPALIDAD DE CHIGUAYANTE",
-      "organismo": "I MUNICIPALIDAD DE CHIGUAYANTE - MUNICIPALIDAD DE CHIGUAYANTE",
-      "publicada": "2026-10-28T14:46:23-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=cH0ED0AUd+oGaTlQaVhGCg==",
-      "tipo": "LE",
-      "zona": "Gran Concepción",
-      "comuna": "Chiguayante",
-      "keywords": [],
-      "fuente": "Licitación",
-      "monto_label": "$13.340.000",
-      "fecha_cierre": "2026-11-09T15:30:00-04:00"
     }
   ]
 }
