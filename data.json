@@ -1,9 +1,23 @@
 {
-  "generado": "2026-11-04T22:57:06.295883-04:00",
+  "generado": "2026-11-05T14:22:49.027845-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 1,
+  "total": 2,
   "oportunidades": [
+    {
+      "id": "4414-73-LE26",
+      "nombre": "ADQUISICIÓN DE ALIMENTOS GOLOSINAS Y BEBIDAS A GRANEL PARA LA FIESTA DE NAVIDAD AÑO 2026 – DIDECO",
+      "organismo": "I MUNICIPALIDAD DE ARAUCO - Finanzas Municipalidad de Arauco",
+      "publicada": "2026-11-05T14:46:41-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=6NZP3+hcIsthMqjcFzfT+g==",
+      "tipo": "LE",
+      "zona": "Biobío",
+      "comuna": "Arauco",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-11-16T15:00:00-04:00"
+    },
     {
       "id": "1057544-374-LP26",
       "nombre": "Suministro de Alimentos y Suplementos Nutricionales",
