@@ -1,9 +1,26 @@
 {
-  "generado": "2026-11-08T22:12:35.603429-04:00",
+  "generado": "2026-11-09T17:11:46.043979-04:00",
   "orgcode": "891391",
   "fuente_api": true,
   "total": 9,
   "oportunidades": [
+    {
+      "id": "1057390-69-LE26",
+      "nombre": "CATERING PARA ENCUENTRO MACROZONAL SUR PROG. CHCC",
+      "organismo": "SERVICIO DE SALUD ARAUCANIA NORTE - Bienes y Servicios",
+      "publicada": "2026-11-09T20:21:51-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=RTD3OsY5UWpnt04klXUlzg==",
+      "tipo": "LE",
+      "zona": "Gran Concepción",
+      "comuna": "Concepción",
+      "keywords": [
+        "catering",
+        "alimentación"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$9.899.000",
+      "fecha_cierre": "2026-11-19T15:30:00-04:00"
+    },
     {
       "id": "1316747-32-L126",
       "nombre": "Servicios para Obra de Ballet La Cenicienta 2026",
@@ -130,23 +147,6 @@
       "keywords": [],
       "fuente": "Licitación",
       "monto_label": "",
-      "fecha_cierre": "2026-11-16T15:00:00-04:00"
-    },
-    {
-      "id": "1057544-374-LP26",
-      "nombre": "Suministro de Alimentos y Suplementos Nutricionales",
-      "organismo": "SERVICIO DE SALUD DE TALCAHUANO HOSPITAL - Bienes y Servicios",
-      "publicada": "2026-11-04T17:00:57-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=MnVNTvUBXtr6d02w6FQ/Wg==",
-      "tipo": "LP",
-      "zona": "Gran Concepción",
-      "comuna": "Talcahuano",
-      "keywords": [
-        "alimentación",
-        "suministro de alimentos"
-      ],
-      "fuente": "Licitación",
-      "monto_label": "$280.000.000",
       "fecha_cierre": "2026-11-16T15:00:00-04:00"
     }
   ]
