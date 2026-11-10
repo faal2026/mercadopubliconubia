@@ -1,9 +1,25 @@
 {
-  "generado": "2026-11-10T00:24:44.973686-04:00",
+  "generado": "2026-11-10T14:21:45.360285-04:00",
   "orgcode": "891391",
   "fuente_api": true,
   "total": 9,
   "oportunidades": [
+    {
+      "id": "860729-5-LE26",
+      "nombre": "SERVICIO ALIMENTACION CON AMPLIO ESPACIO FISICO",
+      "organismo": "SERVICIO DE SALUD ARAUCO - BIENESTAR SSA",
+      "publicada": "2026-11-10T15:56:31-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=yVJMBkdqgukiYQTyWrFNYg==",
+      "tipo": "LE",
+      "zona": "Biobío",
+      "comuna": "Arauco",
+      "keywords": [
+        "alimentación"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$10.227.629",
+      "fecha_cierre": "2026-11-20T15:00:00-04:00"
+    },
     {
       "id": "1057390-69-LE26",
       "nombre": "CATERING PARA ENCUENTRO MACROZONAL SUR PROG. CHCC",
@@ -134,20 +150,6 @@
       "fuente": "Licitación",
       "monto_label": "",
       "fecha_cierre": "2026-11-16T15:31:00-04:00"
-    },
-    {
-      "id": "4414-73-LE26",
-      "nombre": "ADQUISICIÓN DE ALIMENTOS GOLOSINAS Y BEBIDAS A GRANEL PARA LA FIESTA DE NAVIDAD AÑO 2026 – DIDECO",
-      "organismo": "I MUNICIPALIDAD DE ARAUCO - Finanzas Municipalidad de Arauco",
-      "publicada": "2026-11-05T14:46:41-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=6NZP3+hcIsthMqjcFzfT+g==",
-      "tipo": "LE",
-      "zona": "Biobío",
-      "comuna": "Arauco",
-      "keywords": [],
-      "fuente": "Licitación",
-      "monto_label": "",
-      "fecha_cierre": "2026-11-16T15:00:00-04:00"
     }
   ]
 }
