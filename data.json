@@ -1,8 +1,8 @@
 {
-  "generado": "2026-11-10T14:21:45.360285-04:00",
+  "generado": "2026-11-10T22:21:47.110067-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 9,
+  "total": 7,
   "oportunidades": [
     {
       "id": "860729-5-LE26",
@@ -116,40 +116,6 @@
       "fuente": "Licitación",
       "monto_label": "",
       "fecha_cierre": "2026-11-16T15:22:00-04:00"
-    },
-    {
-      "id": "1057417-163-LR26",
-      "nombre": "CONCESIÓN DE CASINO DE ALIMENTACIÓN PARA FUNCIONARIOS DEL COMPLEJO ASISTENCIAL DR. VÍCTOR RÍOS RUIZ LOS ÁNGELES.",
-      "organismo": "COMPLEJO ASISTENCIAL DR.VICTOR RIOS RUIZ - Bienes y Servicios",
-      "publicada": "2026-11-05T19:51:00-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=y5mJfZVLDuULsioqf79YSg==",
-      "tipo": "LR",
-      "zona": "Biobío",
-      "comuna": "Biobío",
-      "keywords": [
-        "alimentación",
-        "casino"
-      ],
-      "fuente": "Licitación",
-      "monto_label": "$3.426.989.270",
-      "fecha_cierre": "2026-12-07T15:00:00-04:00"
-    },
-    {
-      "id": "2771-76-LE26",
-      "nombre": "SERVICIO DE PRODUCCIÓN DE EVENTOS NAVIDAD EN CHIGUAYANTE 2026-SEGUNDO LLAMADO",
-      "organismo": "I MUNICIPALIDAD DE CHIGUAYANTE - MUNICIPALIDAD DE CHIGUAYANTE",
-      "publicada": "2026-11-05T18:31:45-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=RxfxcaSps9a6Jlm4uFG0oQ==",
-      "tipo": "LE",
-      "zona": "Gran Concepción",
-      "comuna": "Chiguayante",
-      "keywords": [
-        "producción de eventos",
-        "producción"
-      ],
-      "fuente": "Licitación",
-      "monto_label": "",
-      "fecha_cierre": "2026-11-16T15:31:00-04:00"
     }
   ]
 }
