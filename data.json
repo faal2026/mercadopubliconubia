@@ -1,9 +1,25 @@
 {
-  "generado": "2026-11-11T14:11:17.536076-04:00",
+  "generado": "2026-11-11T23:29:03.050999-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 2,
+  "total": 3,
   "oportunidades": [
+    {
+      "id": "860729-6-LE26",
+      "nombre": "SERVICIO DE ALIMENTACION PARA FIESTA DE NAVIDAD 2026 HOSPITAL ARAUCO",
+      "organismo": "SERVICIO DE SALUD ARAUCO - BIENESTAR SSA",
+      "publicada": "2026-11-11T21:44:28-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=SkdH926GKNd7Ttb+LEHINg==",
+      "tipo": "LE",
+      "zona": "Biobío",
+      "comuna": "Arauco",
+      "keywords": [
+        "alimentación"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$9.361.016",
+      "fecha_cierre": "2026-11-23T15:00:00-04:00"
+    },
     {
       "id": "860729-5-LE26",
       "nombre": "SERVICIO ALIMENTACION CON AMPLIO ESPACIO FISICO",
