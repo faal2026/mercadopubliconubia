@@ -1,9 +1,25 @@
 {
-  "generado": "2026-11-15T22:28:37.239958-04:00",
+  "generado": "2026-11-16T16:44:11.171549-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 1,
+  "total": 2,
   "oportunidades": [
+    {
+      "id": "2416-33-LE26",
+      "nombre": "SUMINISTRO DE ALIMENTOS PARA BRINDAR ATENCIÓN MUNICIPAL PARA PERSONAS EN SITUACIÓN DE CALLE",
+      "organismo": "I MUNICIPALIDAD DE CONCEPCION - DIDECO MUNICIPALIDAD DE CONCEPCION",
+      "publicada": "2026-11-16T13:55:51-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=aqXs/qjnzeR3j0xOKVIGpQ==",
+      "tipo": "LE",
+      "zona": "Gran Concepción",
+      "comuna": "Concepción",
+      "keywords": [
+        "suministro de alimentos"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-11-23T15:01:00-04:00"
+    },
     {
       "id": "860729-6-LE26",
       "nombre": "SERVICIO DE ALIMENTACION PARA FIESTA DE NAVIDAD 2026 HOSPITAL ARAUCO",
