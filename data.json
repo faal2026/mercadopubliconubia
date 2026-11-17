@@ -1,9 +1,23 @@
 {
-  "generado": "2026-11-17T00:51:20.148721-04:00",
+  "generado": "2026-11-17T15:28:33.549930-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 1,
+  "total": 2,
   "oportunidades": [
+    {
+      "id": "4493-22-L126",
+      "nombre": "ADQUISICIÓN DE ARTICULOS VARIOS PROGRAMA REHABILITACIÓN INTEGRAL",
+      "organismo": "I MUNICIPALIDAD DE PENCO - Departamento de Salud",
+      "publicada": "2026-11-17T14:46:25-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=ffuljNrGJqNkfkVrtSMDpg==",
+      "tipo": "",
+      "zona": "Gran Concepción",
+      "comuna": "Penco",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "$2.000.000",
+      "fecha_cierre": "2026-11-23T15:50:00-04:00"
+    },
     {
       "id": "2416-33-LE26",
       "nombre": "SUMINISTRO DE ALIMENTOS PARA BRINDAR ATENCIÓN MUNICIPAL PARA PERSONAS EN SITUACIÓN DE CALLE",
