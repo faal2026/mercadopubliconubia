@@ -1,9 +1,23 @@
 {
-  "generado": "2026-11-17T23:56:32.582032-04:00",
+  "generado": "2026-11-18T15:10:59.160111-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 2,
+  "total": 3,
   "oportunidades": [
+    {
+      "id": "3796-6-LE26",
+      "nombre": "CANASTA FAMILIARES PARA ADULTOS MAYORES",
+      "organismo": "I MUNICIPALIDAD DE QUILACO - Ilustre Municipalidad de Quilaco",
+      "publicada": "2026-11-18T15:36:52-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=yvnG29KwuJAa8lbGYLdoSA==",
+      "tipo": "LE",
+      "zona": "Biobío",
+      "comuna": "Biobío",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-11-25T17:31:00-04:00"
+    },
     {
       "id": "4493-22-L126",
       "nombre": "ADQUISICIÓN DE ARTICULOS VARIOS PROGRAMA REHABILITACIÓN INTEGRAL",
