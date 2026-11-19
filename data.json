@@ -1,9 +1,23 @@
 {
-  "generado": "2026-11-18T15:10:59.160111-04:00",
+  "generado": "2026-11-18T23:54:24.557825-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 3,
+  "total": 4,
   "oportunidades": [
+    {
+      "id": "4414-81-LE26",
+      "nombre": "1.400 CANASTAS DE ALIMENTOS PARA STOCK BODEGA ASISTENCIALIDAD - DIDECO",
+      "organismo": "I MUNICIPALIDAD DE ARAUCO - Finanzas Municipalidad de Arauco",
+      "publicada": "2026-11-18T19:25:56-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=TdY3bfSShubTocNMdcrsZg==",
+      "tipo": "LE",
+      "zona": "Biobío",
+      "comuna": "Arauco",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-11-30T15:00:00-04:00"
+    },
     {
       "id": "3796-6-LE26",
       "nombre": "CANASTA FAMILIARES PARA ADULTOS MAYORES",
