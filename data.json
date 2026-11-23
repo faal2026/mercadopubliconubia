@@ -1,9 +1,23 @@
 {
-  "generado": "2026-11-22T23:20:59.016681-04:00",
+  "generado": "2026-11-23T18:18:06.934225-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 3,
+  "total": 2,
   "oportunidades": [
+    {
+      "id": "2704-98-LE26",
+      "nombre": "SERVICIO DE ESPECTÁCULO NAVIDEÑO INFANTIL- SC 6848",
+      "organismo": "UNIVERSIDAD DEL BIO BIO - Universidad del Bío-Bío - Campus Concepción",
+      "publicada": "2026-11-23T14:16:10-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=OGgEP7D31kAWnDOAzfLg0Q==",
+      "tipo": "LE",
+      "zona": "Gran Concepción",
+      "comuna": "Concepción",
+      "keywords": [],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-12-03T20:00:00-04:00"
+    },
     {
       "id": "4351-24-LE26",
       "nombre": "Adquisición de Canastas Navideñas año 2026 - Programa Ayudas Sociales",
@@ -17,34 +31,6 @@
       "fuente": "Licitación",
       "monto_label": "$14.805.000",
       "fecha_cierre": "2026-12-03T11:00:00-04:00"
-    },
-    {
-      "id": "4414-81-LE26",
-      "nombre": "1.400 CANASTAS DE ALIMENTOS PARA STOCK BODEGA ASISTENCIALIDAD - DIDECO",
-      "organismo": "I MUNICIPALIDAD DE ARAUCO - Finanzas Municipalidad de Arauco",
-      "publicada": "2026-11-18T19:25:56-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=TdY3bfSShubTocNMdcrsZg==",
-      "tipo": "LE",
-      "zona": "Biobío",
-      "comuna": "Arauco",
-      "keywords": [],
-      "fuente": "Licitación",
-      "monto_label": "",
-      "fecha_cierre": "2026-11-30T15:00:00-04:00"
-    },
-    {
-      "id": "3796-6-LE26",
-      "nombre": "CANASTA FAMILIARES PARA ADULTOS MAYORES",
-      "organismo": "I MUNICIPALIDAD DE QUILACO - Ilustre Municipalidad de Quilaco",
-      "publicada": "2026-11-18T15:36:52-04:00",
-      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=yvnG29KwuJAa8lbGYLdoSA==",
-      "tipo": "LE",
-      "zona": "Biobío",
-      "comuna": "Biobío",
-      "keywords": [],
-      "fuente": "Licitación",
-      "monto_label": "",
-      "fecha_cierre": "2026-11-25T17:31:00-04:00"
     }
   ]
 }
