@@ -1,9 +1,25 @@
 {
-  "generado": "2026-11-24T02:34:28.457197-04:00",
+  "generado": "2026-11-24T16:55:22.310977-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 2,
+  "total": 3,
   "oportunidades": [
+    {
+      "id": "1469-409-L126",
+      "nombre": "Servicios de arriendo de Infraestructura, Alimentación y Hospedaje para el Desarrollo de Jornada Académica",
+      "organismo": "UNIVERSIDAD DE TALCA - Universidad de Talca",
+      "publicada": "2026-11-24T15:59:28-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=UJNTq9AFdiO/Gt0lORgMcQ==",
+      "tipo": "",
+      "zona": "Gran Concepción",
+      "comuna": "Concepción",
+      "keywords": [
+        "alimentación"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$3.500.000",
+      "fecha_cierre": "2026-12-03T18:00:00-04:00"
+    },
     {
       "id": "2704-98-LE26",
       "nombre": "SERVICIO DE ESPECTÁCULO NAVIDEÑO INFANTIL- SC 6848",
