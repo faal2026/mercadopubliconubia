@@ -1,9 +1,25 @@
 {
-  "generado": "2026-11-24T16:55:22.310977-04:00",
+  "generado": "2026-11-25T01:08:13.505525-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 3,
+  "total": 4,
   "oportunidades": [
+    {
+      "id": "4414-84-LE26",
+      "nombre": "SERVICIO PRODUCCION ALIMENTACION Y LOCAL PARA ACT",
+      "organismo": "I MUNICIPALIDAD DE ARAUCO - Finanzas Municipalidad de Arauco",
+      "publicada": "2026-11-24T21:04:25-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=Tq2MqVTjoMiqdY8uo1aSIQ==",
+      "tipo": "LE",
+      "zona": "Biobío",
+      "comuna": "Arauco",
+      "keywords": [
+        "alimentación"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-12-03T09:00:00-04:00"
+    },
     {
       "id": "1469-409-L126",
       "nombre": "Servicios de arriendo de Infraestructura, Alimentación y Hospedaje para el Desarrollo de Jornada Académica",
