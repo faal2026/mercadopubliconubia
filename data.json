@@ -1,9 +1,41 @@
 {
-  "generado": "2026-11-27T00:38:52.147369-04:00",
+  "generado": "2026-11-27T15:43:44.468067-04:00",
   "orgcode": "891391",
   "fuente_api": true,
-  "total": 3,
+  "total": 5,
   "oportunidades": [
+    {
+      "id": "3193-21-LE26",
+      "nombre": "SERVICIO DE ALIMENTACIÓN CONTRATADA PARA LA ALCALDÍA DE MAR DE TOMÉ",
+      "organismo": "DIRECCION DE ABASTECIMIENTO DE LA ARMADA - GOBERNACION MARITIMA DE TALCAHUANO",
+      "publicada": "2026-11-27T16:14:57-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=or/NaY+vwQjcaL+wV6LfCw==",
+      "tipo": "LE",
+      "zona": "Gran Concepción",
+      "comuna": "Talcahuano",
+      "keywords": [
+        "alimentación"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "",
+      "fecha_cierre": "2026-12-07T16:00:00-04:00"
+    },
+    {
+      "id": "3017-99-L126",
+      "nombre": "25 ALMUERZOS ENSALADA PLATO DE FONDO POSTRE Y BEBESTIBLE PROGRAMA VINCULOS",
+      "organismo": "I MUNICIPALIDAD DE LOTA - Departamento de Adquisiciones",
+      "publicada": "2026-11-27T15:48:37-04:00",
+      "link": "http://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=zNqw9OaDVm6nhQe8TfoZ6w==",
+      "tipo": "",
+      "zona": "Biobío",
+      "comuna": "Lota",
+      "keywords": [
+        "almuerzo"
+      ],
+      "fuente": "Licitación",
+      "monto_label": "$400.000",
+      "fecha_cierre": "2026-12-09T15:22:00-04:00"
+    },
     {
       "id": "4414-84-LE26",
       "nombre": "SERVICIO PRODUCCION ALIMENTACION Y LOCAL PARA ACT",
